@@ -37,6 +37,16 @@
   --nav-h: 64px;
 }
 
+/* 제목용 지마켓 산스 (첫 화면 축제 이름) */
+@font-face{
+  font-family:'GmarketSans'; font-weight:700; font-display:swap;
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+}
+@font-face{
+  font-family:'GmarketSans'; font-weight:500; font-display:swap;
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
 /* ---------- 2. 리셋 & 기본 ---------- */
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 16px); }
@@ -103,7 +113,6 @@ button{ font:inherit; }
   background:var(--bg-2); color:var(--ink-3);
   font-size:12.5px; font-weight:700; letter-spacing:-.01em;
 }
-.tag--wait{ background:var(--star-soft); color:#A9761A; }
 
 /* ---------- 5. 내비게이션 ---------- */
 .nav{
@@ -118,10 +127,6 @@ button{ font:inherit; }
 .nav__inner{ height:var(--nav-h); display:flex; align-items:center; gap:24px; }
 .nav__brand{ display:flex; align-items:center; gap:8px; font-size:17px; font-weight:800; letter-spacing:-.03em; }
 .nav__brand img{ width:28px; height:auto; }
-.nav__brand em{
-  font-style:normal; font-size:11px; font-weight:800; letter-spacing:.06em;
-  color:var(--jam); margin-left:4px; vertical-align:3px;
-}
 .nav__menu{ display:flex; gap:4px; margin-left:auto; }
 .nav__menu a{
   padding:8px 12px; border-radius:10px;
@@ -131,6 +136,7 @@ button{ font:inherit; }
 .nav__menu a:hover{ background:var(--bg-2); color:var(--ink); }
 .nav__menu a.is-active{ color:var(--jam); background:var(--jam-soft); }
 .nav__cta{ flex:none; }
+.nav__menu a.nav__menu-cta{ display:none; }   /* 모바일 메뉴에서만 보이는 '부스 찾기' */
 .nav__toggle{
   display:none; width:40px; height:40px; margin-left:auto;
   background:none; border:0; padding:9px 8px; cursor:pointer;
@@ -145,10 +151,10 @@ button{ font:inherit; }
 .nav__toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
 /* ---------- 6. 히어로 ---------- */
-.hero{ position:relative; overflow:hidden; padding:56px 0 72px; }
+.hero{ position:relative; overflow:hidden; padding:150px 0 72px; }
 .hero__blob{ position:absolute; border-radius:50%; filter:blur(70px); opacity:.5; pointer-events:none; }
 .hero__blob--red{ width:460px; height:460px; background:#FFD9D4; top:-140px; right:-100px; }
-.hero__blob--blue{ width:400px; height:400px; background:#D9E6FF; bottom:-180px; left:-120px; }
+.hero__blob--blue{ width:360px; height:360px; background:#D9E6FF; top:42%; left:-180px; }
 .hero__inner{
   position:relative; display:grid; grid-template-columns:1.05fr .95fr;
   gap:40px; align-items:center;
@@ -157,26 +163,82 @@ button{ font:inherit; }
   font-size:13px; font-weight:800; letter-spacing:.02em; color:var(--jam);
   margin-bottom:12px;
 }
-.hero__title{ font-size:clamp(34px,5vw,56px); font-weight:800; }
-.hero__title .hl{
-  background:linear-gradient(180deg,transparent 62%, #FFE3DF 62%);
-  padding:0 2px;
+/* 축제 이름: 손글씨 슬로건 + 지마켓 산스 */
+.hero__title{ font-family:'GmarketSans','Pretendard Variable',sans-serif; font-weight:700; line-height:1.12; letter-spacing:-.03em; }
+.hero__title > span{ display:block; }
+.hero__slogan{
+  font-family:'Gaegu',cursive; font-weight:700; letter-spacing:0;
+  font-size:clamp(24px,2.9vw,34px); color:#4A4A4A; margin-bottom:10px;
 }
-.hero__lead{ margin-top:18px; font-size:17px; color:var(--ink-2); line-height:1.72; }
-.hero__lead b{ color:var(--jam); }
+.hero__year{
+  width:max-content; font-size:clamp(40px,5.6vw,68px);
+  background:linear-gradient(90deg,#55C3D9,#A8D68B 55%,#F4E27A);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero__name{ margin-top:6px; font-size:clamp(28px,4.1vw,50px); }
+.hero__name .k{ color:#111; }
+.hero__name .g{
+  background:linear-gradient(90deg,#7F52EE,#5F7FC6 40%,#4E9A98 70%,#4FBF6C);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero__jam{ margin-top:10px; font-size:clamp(34px,5.2vw,64px); white-space:nowrap; letter-spacing:-.02em; }
+.hero__jam .br{
+  display:inline-block; width:.26em; height:.92em; border:0 solid #6C8FB0; vertical-align:-.08em;
+}
+.hero__jam .br--l{ border-width:.09em 0 0 .09em; margin-right:.06em; }
+.hero__jam .br--r{ border-width:0 .09em .09em 0; margin-left:.06em; vertical-align:-.22em; }
+.hero__jam .c1{ color:#337A48; }
+.hero__jam .c2{ color:#F07F38; }
+.hero__jam .c3{ color:#111; }
+.hero__jam .c4{ color:#E8473D; }
+.hero__title-jar{ display:none; }   /* 모바일에서만 제목 옆에 보이는 잼 단지 */
 
-.hero__facts{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:26px; max-width:520px; }
-.hero__facts li:last-child{ grid-column:1 / -1; }
-.hero__facts li{
-  display:flex; align-items:center; gap:10px;
-  padding:12px 16px; border-radius:var(--r);
-  background:#fff; box-shadow:var(--shadow-sm);
+.hero__lead{ margin-top:20px; font-size:17px; color:var(--ink-2); line-height:1.72; }
+.hero__lead b{ color:var(--jam); }
+.hero__lead .nw{ white-space:nowrap; }   /* '체험 부스 71개 운영'은 한 줄로 */
+
+/* 일시·장소·주최 (노란 리본 라벨) */
+.hero__facts{ display:flex; flex-direction:column; gap:14px; margin-top:26px; }
+.hero__facts > div{ display:flex; align-items:flex-start; gap:16px; }
+.hero__facts dt{
+  flex:none; width:104px; padding:7px 0 6px; text-align:center;
+  font-family:'GmarketSans','Pretendard Variable',sans-serif; font-size:16px; font-weight:700; color:#111;
+  background:linear-gradient(180deg,#F7C548,#EFB12C);
+  clip-path:polygon(0 4%,100% 4%,88% 50%,100% 100%,0 100%,12% 50%);
+  border-radius:4px;
 }
-.hero__facts .ico{ color:var(--jam); }
-.hero__facts li:nth-child(2) .ico{ color:var(--lid); }
-.hero__facts li:nth-child(3) .ico{ color:var(--eco); }
-.hero__facts b{ display:block; font-size:15px; font-weight:700; }
-.hero__facts span{ display:block; font-size:13px; color:var(--ink-3); }
+.hero__facts dd{
+  font-family:'GmarketSans','Pretendard Variable',sans-serif; font-weight:500;
+  font-size:clamp(19px,2vw,23px); line-height:1.4; letter-spacing:-.02em; padding-top:2px;
+}
+.hero__facts .b{ color:#2350B0; }
+.hero__facts .o{ color:#EC6748; }
+.hero__facts .sub{ display:block; font-size:.82em; color:#111; }
+.hero__facts .nw{ white-space:nowrap; }
+.hero__click{
+  display:inline-block; margin-left:8px; padding:4px 12px 3px; vertical-align:3px;
+  border-radius:999px; background:#F5C443; color:#111;
+  font-family:'GmarketSans',sans-serif; font-size:12.5px; font-weight:700; letter-spacing:0;
+  box-shadow:3px 3px 0 #111; transition:transform .15s, box-shadow .15s;
+}
+.hero__click:hover{ transform:translate(-1px,-1px); box-shadow:4px 4px 0 #111; }
+
+/* 가랜드 (폼폼·별·삼각 깃발) */
+.hero__garland{ position:absolute; inset:0 0 auto 0; height:240px; pointer-events:none; }
+.garland{ position:absolute; top:0; height:auto; overflow:visible; }
+.garland--left{ left:0; width:min(52vw,660px); }
+.garland--right{ right:0; width:min(46vw,620px); }
+/* 매달린 별: 폼폼 끝 ~ 깃발 앞까지 같은 간격으로 */
+.hero__hangs{
+  position:absolute; top:0;
+  left:calc(min(52vw,660px) * .68); right:calc(min(46vw,620px) - 24px);
+  display:flex; justify-content:space-evenly; align-items:flex-start;
+}
+.hang{ position:relative; width:2px; height:var(--h); background:#F5C443; }
+.hang svg{ position:absolute; left:50%; bottom:-20px; width:26px; height:26px; translate:-50% 0; fill:#F5C443; }
+@media (max-width:1359px){ .hang:nth-child(n+7){ display:none; } }
+.garland .pom,.hang{ transform-box:fill-box; transform-origin:50% 0; animation:sway 4.5s ease-in-out var(--d) infinite alternate; }
+@keyframes sway{ from{ rotate:-3deg } to{ rotate:3deg } }
 
 .hero__cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
 .hero__note{ margin-top:14px; font-size:13px; color:var(--ink-3); }
@@ -197,22 +259,21 @@ button{ font:inherit; }
 .hero__badge-num{ font-size:30px; font-weight:800; color:var(--jam); letter-spacing:-.04em; }
 .hero__badge-txt{ font-size:12.5px; font-weight:600; color:var(--ink-2); line-height:1.4; }
 
-/* ---------- 7. 빠른 메뉴 ---------- */
-.quick{ padding-bottom:24px; }
-.quick__grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-.quick__item{
-  display:flex; flex-direction:column; gap:4px;
-  padding:22px 20px; border-radius:var(--r-lg);
-  background:var(--bg-2);
-  transition:transform .18s ease, background .18s ease;
+/* 첫 화면 별 흩날리기 (js/main.js 에서 약 10초 동안만 생성) */
+.hero__stars{ position:absolute; inset:0; z-index:2; overflow:hidden; pointer-events:none; }
+.hero__star{
+  position:absolute; top:-32px; left:var(--x);
+  width:var(--size); height:var(--size); color:var(--c);
+  opacity:0;
+  animation:star-fall var(--dur) cubic-bezier(.35,.1,.55,1) var(--delay) forwards;
 }
-.quick__item:hover{ transform:translateY(-3px); background:#EEF1F4; }
-.quick__item .ico{ color:var(--jam); margin-bottom:8px; }
-.quick__item:nth-child(2) .ico{ color:var(--lid); }
-.quick__item:nth-child(3) .ico{ color:var(--eco); }
-.quick__item:nth-child(4) .ico{ color:var(--ai); }
-.quick__item b{ font-size:16px; font-weight:700; }
-.quick__item span{ font-size:13.5px; color:var(--ink-3); }
+.hero__star svg{ display:block; width:100%; height:100%; fill:currentColor; }
+@keyframes star-fall{
+  0%  { opacity:0; translate:0 0; rotate:0deg; }
+  12% { opacity:var(--alpha); }
+  75% { opacity:var(--alpha); }
+  100%{ opacity:0; translate:var(--drift) var(--fall); rotate:var(--spin); }
+}
 
 /* ---------- 8. 섹션 공통 ---------- */
 .section{ padding:88px 0; }
@@ -226,97 +287,144 @@ button{ font:inherit; }
 @media (prefers-reduced-motion:reduce){
   .reveal{ opacity:1; transform:none; transition:none; }
   .hero__art img{ animation:none; }
+  .hero__stars{ display:none; }
+  .garland .pom,.hang{ animation:none; }
   html{ scroll-behavior:auto; }
 }
 
+/* ---------- 8-1. 인사의 말 ---------- */
+.greeting{ display:grid; grid-template-columns:.7fr 1.3fr; gap:48px; align-items:start; }
+.greeting__body{
+  padding:36px 40px; border-radius:var(--r-lg);
+  background:#fff; border:1px solid var(--line);
+  font-size:16px; line-height:1.85; color:var(--ink-2);
+}
+.greeting__body p + p{ margin-top:14px; }
+.greeting__sign{ text-align:right; color:var(--ink-3); }
+.greeting__sign b{ color:var(--ink); font-weight:700; }
+
 /* ---------- 9. JAM 네이밍 ---------- */
-.jam-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
+.jam-name .n1{ color:#75147C; }
+.jam-name .n2{ color:#377E21; }
+.jam-name .n3{ color:#ED702D; }
+.jam-name .n4{ color:#EA3323; }
+
+.jam-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px; }
 .jam-card{
-  padding:28px 26px 30px; border-radius:var(--r-lg);
+  padding:20px 22px 22px; border-radius:var(--r-lg);
   background:#fff; box-shadow:var(--shadow-sm);
-  border:1px solid var(--line);
+  border:1px solid var(--line); text-align:center;
+}
+.jam-card__head{
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  font-size:19px; font-weight:700; color:var(--ink-2);
 }
 .jam-card__letter{
   display:inline-flex; align-items:center; justify-content:center;
-  width:52px; height:52px; border-radius:16px;
+  width:46px; height:46px; border-radius:14px;
   background:color-mix(in srgb, var(--c) 12%, #fff);
-  color:var(--c); font-size:26px; font-weight:800; letter-spacing:0;
-  margin-bottom:16px;
+  color:var(--c); font-size:25px; font-weight:800; letter-spacing:0;
 }
 .jam-card__img{
-  display:block; width:100%; max-width:160px; height:130px;
-  object-fit:contain; margin:12px auto 20px;
+  display:block; width:100%; max-width:130px; height:96px;
+  object-fit:contain; margin:14px auto;
 }
-.jam-card h3{ font-size:18px; font-weight:700; }
-.jam-card p{ margin-top:8px; font-size:15px; color:var(--ink-2); }
+.jam-card p{ font-size:15px; color:var(--ink-2); line-height:1.55; }
 
-.info-card{
-  margin-top:20px; padding:32px; border-radius:var(--r-lg);
+/* Joy · Join · Jam */
+.jam-meaning{
+  display:grid; grid-template-columns:170px minmax(0,1fr); gap:32px; align-items:center;
+  margin-top:16px; padding:22px 32px; border-radius:var(--r-lg);
   background:var(--bg-2);
 }
-.info-card__title{ font-size:18px; font-weight:800; margin-bottom:18px; }
-.info-list{ display:grid; grid-template-columns:repeat(2,1fr); gap:2px 32px; }
-.info-list > div{
-  display:flex; gap:16px; padding:13px 0; border-top:1px solid var(--line);
+.jam-meaning__img{ width:100%; max-width:170px; margin:0 auto; }
+.jam-meaning__list{ display:flex; flex-direction:column; gap:14px; }
+.jam-meaning__list h3{
+  display:flex; align-items:center; gap:10px;
+  font-size:18px; font-weight:800; color:var(--c);
 }
-.info-list dt{ flex:none; width:78px; font-size:14.5px; font-weight:700; color:var(--ink-3); }
-.info-list dd{ font-size:15.5px; font-weight:600; }
-.info-card__foot{ margin-top:20px; font-size:14.5px; color:var(--ink-2); }
+.jam-meaning__tag{
+  display:inline-block; min-width:56px; padding:3px 10px; border-radius:8px; text-align:center;
+  background:var(--tag); color:#fff; font-size:15px; font-weight:700; letter-spacing:0;
+}
+.jam-meaning__list p{ margin-top:4px; font-size:15px; color:var(--ink-2); line-height:1.6; }
+.jam-meaning__list b{ color:var(--ink); font-weight:700; }
 
 /* ---------- 10. 존 ---------- */
-.zone-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
-.zone{
-  padding:26px 24px 28px; border-radius:var(--r-lg);
+.map-card{
+  display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:32px; align-items:center;
+  margin:0; padding:24px; border-radius:var(--r-lg);
   background:#fff; border:1px solid var(--line);
-  transition:transform .18s ease, box-shadow .18s ease;
 }
-.zone:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
-.zone .ico{
+.map-card img{ width:100%; height:auto; border-radius:var(--r); }
+.map-card__head{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.map-card h3{ font-size:clamp(24px,2.6vw,30px); font-weight:800; }
+
+/* 공간(ZONE) 안내 */
+.zone-list{ margin-top:22px; }
+.zone-list__group{
+  margin:20px 0 10px; font-size:13.5px; font-weight:800; color:var(--ink-3); letter-spacing:.02em;
+}
+.zone-list__group:first-child{ margin-top:0; }
+.zone-list ul{ display:flex; flex-direction:column; gap:8px; }
+.zone-list li{
+  display:flex; align-items:center; gap:14px;
+  padding:12px 14px; border-radius:var(--r);
+  background:var(--bg-2);
+}
+.zone-list .ico{
+  width:42px; height:42px; padding:9px; border-radius:13px;
   color:var(--c); background:var(--cs);
-  width:52px; height:52px; padding:10px; border-radius:16px; margin-bottom:16px;
 }
-.zone h3{ font-size:17.5px; font-weight:700; }
-.zone p{ margin-top:7px; font-size:14.5px; color:var(--ink-2); }
-.zone--map{
-  display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:8px;
-  background:repeating-linear-gradient(135deg,#fff 0 12px,#FAFBFC 12px 24px);
-  border-style:dashed; border-color:#D8DEE3;
-}
-.zone--map .tag{ margin-top:6px; }
+.zone-list b{ display:block; font-size:16px; font-weight:700; }
+.zone-list span{ display:block; margin-top:2px; font-size:14.5px; color:var(--ink-2); line-height:1.5; }
 
-/* ---------- 11. 일정표 ---------- */
-.table-card{
-  margin-top:36px; background:#fff; border-radius:var(--r-lg);
-  border:1px solid var(--line); overflow:hidden;
+/* ---------- 11. 일정표 (리플릿 디자인) ---------- */
+.tt-wrap{
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:start;
+  margin-top:24px;
 }
-.tt{ width:100%; border-collapse:collapse; }
-.tt thead th{
-  background:var(--bg-2); padding:16px 20px;
-  font-size:14px; font-weight:700; color:var(--ink-2); text-align:left;
-  white-space:nowrap;
+.tt-block{
+  --tc:#3982CC;                 /* 무대 행사 블루 */
+  --row-a:#EDF9F8; --row-b:#F1F0EF;
+  padding:22px 24px; border-radius:var(--r-lg);
+  background:#fff; border:1px solid var(--line);
 }
-.tt thead th em{ font-style:normal; font-weight:600; color:var(--ink-3); font-size:13px; }
-.tt tbody th{
-  padding:18px 20px; font-size:15px; font-weight:700; text-align:left;
-  white-space:nowrap; color:var(--ink); border-top:1px solid var(--line);
-  vertical-align:top;
+.tt-block--booth{ --tc:#3FA099; } /* 체험 부스 틸 */
+.tt-block__title{
+  display:flex; align-items:center; gap:10px;
+  font-size:21px; font-weight:800; color:var(--tc);
 }
-.tt tbody td{
-  padding:18px 20px; font-size:15px; color:var(--ink-2);
-  border-top:1px solid var(--line); vertical-align:top;
-}
-.tt tbody td b{ color:var(--ink); font-weight:700; }
-.tt__rest td{ background:#FCFCFD; color:var(--ink-3); }
-.tt__tag{
-  display:inline-block; margin-left:6px; padding:2px 9px; border-radius:999px;
-  background:var(--bg-2); color:var(--ink-3); font-size:12.5px; font-weight:600; white-space:nowrap;
-}
-.tt__tag--book{ background:var(--jam-soft); color:var(--jam-deep); }
+.tt-block__title .ico{ width:26px; height:26px; }
+.tt-block__notice{ margin-top:4px; font-size:14px; font-weight:600; color:#F04322; }
+.tt-block__foot{ margin-top:14px; font-size:14px; color:var(--ink-2); }
+.tt-block__foot b{ color:var(--ink); }
 
-.note-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:16px; }
-.note{ padding:22px 24px; border-radius:var(--r); background:var(--bg-2); }
-.note b{ font-size:15px; font-weight:700; }
-.note p{ margin-top:6px; font-size:14.5px; color:var(--ink-2); }
+.tt-group{ display:flex; gap:6px; margin-top:8px; }
+.tt-block__title + .tt-group,
+.tt-block__notice + .tt-group{ margin-top:14px; }
+.tt-group__label{
+  flex:none; width:88px;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  border-radius:14px 0 0 14px;
+  background:var(--tc); color:#fff;
+  font-size:17px; font-weight:800; line-height:1.25;
+}
+.tt-rows{ flex:1; display:flex; flex-direction:column; gap:3px; min-width:0; }
+.tt-rows > div{
+  display:grid; grid-template-columns:8.5em minmax(0,1fr); gap:12px; align-items:center;
+  min-height:31px; padding:3px 16px; font-size:15px; background:var(--row-a);
+}
+.tt-rows > div:nth-child(even){ background:var(--row-b); }
+.tt-rows dt{ font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.tt-rows dd{ font-weight:600; }
+
+.tt-block--booth .tt-rows > div{ background:var(--row-b); }
+.tt-block--booth .tt-rows > div.is-book{ background:#DFF2ED; }
+.tt-rows > div.is-book dd{ color:var(--tc); }
+.tt-group--lunch .tt-rows > div{ flex:1; min-height:44px; background:#FAFBDA; }
+.tt-group--lunch dd{ color:var(--tc); }
+.tt-group--lunch small{ display:inline; margin-left:6px; font-size:13px; font-weight:500; color:var(--ink-2); }
 
 /* ---------- 12. 부스 탐색 ---------- */
 .finder{ margin-top:32px; }
@@ -332,6 +440,7 @@ button{ font:inherit; }
 }
 .finder__search input::placeholder{ color:var(--ink-3); }
 .finder__filters{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.finder__filters + .finder__filters{ margin-top:8px; }
 .chip{
   height:38px; padding:0 16px; border-radius:999px;
   background:#fff; border:1px solid var(--line); color:var(--ink-2);
@@ -340,24 +449,36 @@ button{ font:inherit; }
 }
 .chip:hover{ background:var(--bg-2); }
 .chip.is-on{ background:var(--ink); border-color:var(--ink); color:#fff; }
+.chip--color::before{
+  content:''; display:inline-block; width:10px; height:10px; margin-right:7px;
+  border-radius:3px; background:var(--c); vertical-align:0;
+}
+.chip--color.is-on{ background:var(--c); border-color:var(--c); }
+.chip--color.is-on::before{ background:#fff; }
 .finder__count{ margin-top:14px; font-size:14px; color:var(--ink-3); }
 
 .booth-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px;
 }
 .booth{
-  padding:22px 22px 24px; border-radius:var(--r-lg);
-  background:#fff; border:1px solid var(--line);
+  display:flex; flex-direction:column;
+  padding:22px 22px 20px; border-radius:var(--r-lg);
+  background:#fff; border:1px solid var(--line); border-top:4px solid var(--c,var(--line));
   transition:transform .18s ease, box-shadow .18s ease;
 }
 .booth:hover{ transform:translateY(-3px); box-shadow:var(--shadow); }
 .booth__top{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.booth__no{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:40px; height:40px; padding:0 8px; border-radius:12px;
+  background:var(--c,var(--ink-2)); color:#fff;
+  font-size:18px; font-weight:800; letter-spacing:-.01em;
+}
 .booth__field{
   padding:4px 11px; border-radius:999px;
   font-size:12.5px; font-weight:700;
   background:var(--cs,var(--bg-2)); color:var(--c,var(--ink-2));
 }
-.booth__code{ font-size:12.5px; font-weight:700; color:var(--ink-3); letter-spacing:.02em; }
 .booth h3{ margin-top:14px; font-size:17px; font-weight:700; line-height:1.4; }
 .booth__team{ margin-top:8px; font-size:14px; color:var(--ink-3); }
 .booth__desc{ margin-top:10px; font-size:14.5px; color:var(--ink-2); }
@@ -366,48 +487,83 @@ button{ font:inherit; }
   padding:4px 10px; border-radius:8px; background:var(--bg-2);
   font-size:12.5px; font-weight:600; color:var(--ink-2);
 }
+.booth__more{
+  align-self:flex-start; margin-top:auto; padding-top:16px;
+  font-size:14px; font-weight:700; color:var(--c,var(--ink-2));
+}
+.booth__more::after{ content:' →'; }
+.booth__more:hover{ text-decoration:underline; }
 .booth-empty{ margin-top:32px; text-align:center; color:var(--ink-3); font-size:15px; }
 
-.download{
-  display:flex; align-items:center; justify-content:space-between; gap:24px;
-  margin-top:28px; padding:28px 32px; border-radius:var(--r-lg);
-  background:var(--ink); color:#fff;
+/* ---------- 13. 스탬프 투어 (종이 리플렛 안내) ---------- */
+/* 메뉴로 이동하면 섹션 위 여백을 건너뛰어 한 화면에 다 보이도록 (축제 소개·시간표·스탬프 투어·오시는 길) */
+#about,#schedule,#stamp,#location{ scroll-margin-top:-72px; }
+.stamp__cols{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:start; margin-top:22px; }
+.stamp__steps{ display:grid; gap:10px; counter-reset:step; }
+.stamp__steps--next{ counter-reset:step 2; }   /* 오른쪽 칸은 3번부터 */
+.stamp__steps > li{ counter-increment:step; }
+.stamp__step{
+  position:relative; padding:14px 18px 14px 60px; border-radius:var(--r);
+  background:var(--bg-2);
 }
-.download b{ font-size:18px; font-weight:700; }
-.download p{ margin-top:6px; font-size:14.5px; color:#C6CBD2; max-width:52ch; }
-.download .btn--primary{ flex:none; }
+.stamp__step::before{
+  content:counter(step); position:absolute; left:16px; top:50%; transform:translateY(-50%);
+  display:flex; align-items:center; justify-content:center;
+  width:30px; height:30px; border-radius:50%;
+  background:var(--jam); color:#fff; font-size:15px; font-weight:800;
+}
+.stamp__step em{ display:block; font-style:normal; font-size:12.5px; font-weight:700; color:var(--jam-deep); }
+.stamp__step span{ display:block; margin-top:2px; font-size:15.5px; font-weight:600; color:var(--ink); }
+.stamp__step small{ font-size:13.5px; font-weight:600; color:var(--ink-3); }
+/* 단계 아래 붙는 설명 (번호 줄에 맞춰 들여쓰기) */
+.stamp__more{ margin:2px 0 4px 30px; padding-left:20px; border-left:2px dashed color-mix(in srgb, var(--jam) 30%, #fff); }
 
-/* ---------- 13. 스탬프 투어 ---------- */
-.stamp{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
-.stamp__rule{ margin-top:26px; display:grid; gap:10px; }
-.stamp__rule li{
-  position:relative; padding-left:30px; font-size:16px; color:var(--ink-2);
-}
-.stamp__rule li::before{
-  content:''; position:absolute; left:0; top:9px;
-  width:16px; height:16px; border-radius:50%;
-  background:var(--jam-soft); box-shadow:inset 0 0 0 2px var(--jam);
-}
-.stamp__rule b{ color:var(--ink); }
-.stamp__list{ display:grid; gap:10px; }
-.stamp__list li{
-  display:flex; align-items:center; gap:16px;
-  padding:16px 20px; border-radius:var(--r);
+/* 권장 인증 기준 */
+.stamp__rec{
+  padding:18px 20px; border-radius:var(--r);
   background:#fff; border:1px solid var(--line);
 }
-.stamp__dot{
-  flex:none; display:flex; align-items:baseline; justify-content:center; gap:1px;
-  width:56px; height:56px; border-radius:50%;
-  border:2px dashed color-mix(in srgb, var(--c) 62%, #fff);
-  background:color-mix(in srgb, var(--c) 8%, #fff);
-  color:var(--c); font-size:20px; font-weight:800;
+.stamp__rec h3{ font-size:17px; font-weight:800; }
+.stamp__rec > p{ margin-top:4px; font-size:14px; color:var(--ink-2); }
+.stamp__rec table{ width:100%; margin-top:12px; border-collapse:collapse; font-size:14.5px; }
+.stamp__rec thead th{
+  padding:8px 12px; background:var(--bg-2); text-align:left;
+  font-size:13px; font-weight:700; color:var(--ink-3);
 }
-.stamp__dot em{ font-style:normal; font-size:11px; font-weight:700; }
-.stamp__list b{ display:block; font-size:16px; font-weight:700; }
-.stamp__list span{ font-size:14px; color:var(--ink-3); }
+.stamp__rec thead th:first-child{ border-radius:10px 0 0 10px; }
+.stamp__rec thead th:last-child{ border-radius:0 10px 10px 0; }
+.stamp__rec tbody th,.stamp__rec tbody td{ padding:8px 12px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
+.stamp__rec tbody tr:first-child > *{ border-top:0; }
+.stamp__rec tbody th{ white-space:nowrap; font-weight:700; }
+.stamp__rec tbody th::before{
+  content:''; display:inline-block; width:8px; height:8px; margin-right:8px; vertical-align:2px;
+  border-radius:50%; background:var(--c);
+}
+.stamp__rec td{ color:var(--ink-2); }
+.stamp__rec td b{ color:var(--ink); }
+.stamp__rec td small{ margin-left:4px; font-size:12.5px; color:var(--ink-3); }
+
+.stamp__gift{
+  padding:18px 20px; border-radius:var(--r);
+  background:var(--star-soft); font-size:15.5px; color:var(--ink-2);
+}
+.stamp__gift b{ color:var(--ink); }
+.stamp__gift p{ margin-top:6px; font-size:13.5px; font-weight:600; color:var(--jam-deep); }
+.stamp__side{
+  padding:20px 22px 22px; border-radius:var(--r);
+  background:var(--eco-soft); border:1px solid color-mix(in srgb, var(--eco) 18%, #fff);
+}
+.stamp__side-tag{ font-size:13px; font-weight:800; color:var(--eco); }
+.stamp__side-title{ margin-top:4px; font-size:18px; font-weight:800; }
+.stamp__plog{ margin-top:8px; font-size:14.5px; color:var(--ink-2); }
+.stamp__plog-how{
+  margin-top:12px; padding:12px 14px; border-radius:var(--r);
+  background:#fff; font-size:14.5px; color:var(--ink-2);
+}
+.stamp__plog-how b{ color:var(--eco); }
 
 /* ---------- 14. 오시는 길 ---------- */
-.loc{ display:grid; grid-template-columns:1.1fr .9fr; gap:16px; margin-top:36px; }
+.loc{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px; }
 .loc__map{
   min-height:380px; border-radius:var(--r-lg); overflow:hidden;
   background:#fff; border:1px solid var(--line);
@@ -424,12 +580,13 @@ button{ font:inherit; }
 .loc__map-ph .btn{ margin-top:14px; }
 .loc__info{ display:grid; gap:10px; align-content:start; }
 .loc__item{
-  display:flex; gap:14px; padding:20px 22px;
+  display:flex; gap:14px; padding:16px 20px;
   border-radius:var(--r); background:#fff; border:1px solid var(--line);
 }
 .loc__item .ico{ color:var(--lid); margin-top:2px; }
 .loc__item b{ font-size:15.5px; font-weight:700; }
 .loc__item p{ margin-top:5px; font-size:14.5px; color:var(--ink-2); }
+.loc__item p b{ font-size:inherit; color:var(--ink); }
 
 /* ---------- 15. 푸터 ---------- */
 .footer{ padding:44px 0 56px; border-top:1px solid var(--line); }
@@ -442,18 +599,33 @@ button{ font:inherit; }
 
 /* ---------- 16. 반응형 ---------- */
 @media (max-width:960px){
-  .hero{ padding:36px 0 56px; }
+  .hero{ padding:96px 0 56px; }
+  .garland--left{ width:62vw; }
+  .garland--right{ width:56vw; }
+  .hero__hangs{ display:none; }   /* 모바일에서는 매달린 별 숨김 */
   .hero__inner{ grid-template-columns:1fr; gap:32px; }
-  .hero__art{ order:-1; }
-  .hero__art{ padding-bottom:0; }
-  .hero__art img{ width:min(72%,300px); }
-  .hero__badge{ position:static; display:inline-flex; margin-top:14px; padding:10px 16px; }
-  .quick__grid{ grid-template-columns:repeat(2,1fr); }
-  .jam-grid,.zone-grid,.booth-grid{ grid-template-columns:repeat(2,1fr); }
-  .info-list{ grid-template-columns:1fr; }
-  .note-row{ grid-template-columns:1fr; }
-  .stamp{ grid-template-columns:1fr; gap:32px; }
+  /* 모바일: 큰 잼 단지 대신 제목 세 줄 옆에 작은 잼 단지 */
+  .hero__art{ display:none; }
+  .hero__title{ display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:12px; align-items:center; }
+  .hero__slogan{ grid-column:1 / -1; }
+  .hero__year,.hero__name,.hero__jam{ grid-column:1; }
+  .hero__year{ font-size:clamp(34px,9vw,68px); }
+  .hero__name{ font-size:clamp(24px,6.4vw,50px); }
+  .hero__jam{ font-size:clamp(26px,7.2vw,64px); }
+  .hero__title-jar{
+    display:block; grid-column:2; grid-row:2 / span 3; align-self:center;
+    width:clamp(92px,27vw,230px); height:auto;
+    filter:drop-shadow(0 10px 18px rgba(224,72,63,.18));
+  }
+  .hero__badge{ display:none; }   /* 모바일에서는 '71개 체험 부스' 배지 숨김 */
+  .jam-grid,.booth-grid{ grid-template-columns:repeat(2,1fr); }
+  .jam-meaning{ grid-template-columns:1fr; gap:24px; padding:28px 24px; }
+  .jam-meaning__img{ max-width:180px; }
+  .tt-wrap{ grid-template-columns:1fr; }
   .loc{ grid-template-columns:1fr; }
+  .map-card{ grid-template-columns:1fr; gap:20px; }
+  .stamp__cols{ grid-template-columns:1fr; gap:10px; }
+  .greeting{ grid-template-columns:1fr; gap:20px; }
   .section{ padding:64px 0; }
 
   .nav__cta{ display:none; }
@@ -467,25 +639,87 @@ button{ font:inherit; }
   }
   .nav__menu.is-open{ display:flex; }
   .nav__menu a{ padding:13px 12px; font-size:16px; }
+  .nav__menu a.nav__menu-cta{ display:block; color:var(--jam); font-weight:700; }
 }
 
 @media (max-width:640px){
-  .jam-grid,.zone-grid,.booth-grid{ grid-template-columns:1fr; }
-  .hero__facts{ grid-template-columns:1fr; }
+  .jam-grid,.booth-grid{ grid-template-columns:1fr; }
+  .hero__lead{ margin-top:16px; font-size:16px; line-height:1.6; }
+  .hero__facts > div{ gap:12px; }
+  .hero__facts dt{ width:84px; font-size:14px; }
   .hero__cta .btn{ width:100%; }
-  .download{ flex-direction:column; align-items:flex-start; }
-  .download .btn{ width:100%; }
+  .hero__cta .btn--ghost{ order:-1; }   /* 모바일: 부스 안내도 버튼을 위로 */
   .footer__inner{ flex-direction:column; }
   .footer__meta{ text-align:left; }
-  .info-card{ padding:24px 20px; }
-
-  /* 표를 카드 형태로 전환 */
-  .tt thead{ display:none; }
-  .tt tbody tr{ display:block; padding:16px 18px; border-top:1px solid var(--line); }
-  .tt tbody th{ display:block; padding:0 0 8px; border:0; color:var(--jam); font-size:14px; }
-  .tt tbody td{ display:block; padding:4px 0; border:0; font-size:15px; }
-  .tt tbody td::before{
-    content:attr(data-label) ' · ';
-    font-size:12.5px; font-weight:700; color:var(--ink-3);
+  /* 축제 소개: 제목 한 줄 + 카드는 가로형으로 촘촘하게 */
+  #about{ padding:32px 0 40px; }
+  #about .section__title{ font-size:min(26px,5.8vw); }
+  .jam-name{ white-space:nowrap; }
+  .jam-grid{ gap:8px; margin-top:16px; }
+  .jam-card{
+    display:grid; grid-template-columns:72px minmax(0,1fr); column-gap:14px; align-items:center;
+    padding:12px 16px; text-align:left;
   }
+  .jam-card__img{ grid-column:1; grid-row:1 / span 2; width:72px; height:60px; margin:0; }
+  .jam-card__head{ grid-column:2; justify-content:flex-start; gap:8px; font-size:16px; }
+  .jam-card__letter{ width:30px; height:30px; border-radius:9px; font-size:17px; }
+  .jam-card p{ grid-column:2; margin-top:4px; font-size:13.5px; line-height:1.5; }
+  .jam-meaning{ margin-top:8px; padding:16px; }
+  .jam-meaning__img{ display:none; }
+  .jam-meaning__list{ gap:12px; }
+  .jam-meaning__list h3{ font-size:16px; gap:8px; }
+  .jam-meaning__tag{ min-width:48px; padding:2px 8px; font-size:13px; }
+  .jam-meaning__list p{ font-size:13.5px; line-height:1.55; }
+
+  /* 오시는 길: 세로 간격 줄이기 */
+  #location{ padding:32px 0 40px; }
+  #location .section__lead{ margin-top:8px; font-size:15px; }
+  .loc{ gap:8px; margin-top:16px; }
+  .loc__map,.loc__map-ph{ min-height:0; }
+  .loc__map-ph{ padding:14px 16px; gap:2px; }
+  .loc__map-ph .ico{ display:none; }
+  .loc__map-ph b{ font-size:17px; margin-top:2px; }
+  .loc__map-ph span{ font-size:13.5px; }
+  .loc__map-ph .btn{ margin-top:8px; }
+  .loc__info{ gap:8px; }
+  .loc__item{ gap:12px; padding:12px 14px; }
+  .loc__item b{ font-size:15px; }
+  .loc__item p{ margin-top:2px; font-size:13.5px; line-height:1.5; }
+
+  /* 인사의 말: 휴대폰 한 화면에 들어오도록 */
+  #greeting{ padding:28px 0 36px; }
+  #greeting .eyebrow{ margin-bottom:4px; }
+  #greeting .section__title{ font-size:24px; }
+  .greeting{ gap:12px; }
+  .greeting__body{ padding:16px 16px 14px; font-size:13px; line-height:1.6; letter-spacing:-.02em; }
+  .greeting__body p + p{ margin-top:7px; }
+
+  /* 부스 찾기 필터: 분야·대상은 한 줄에 5개, 번호는 3개씩 두 줄 */
+  .finder__filters{ flex-wrap:nowrap; gap:5px; }
+  .chip{ flex:1 1 auto; min-width:0; height:34px; padding:0 6px; font-size:13px; white-space:nowrap; }
+  #boothColorFilters{ display:grid; grid-template-columns:repeat(3,1fr); }
+  .chip--color::before{ width:8px; height:8px; margin-right:5px; }
+
+  /* 스탬프 투어: 좁은 화면에서 들여쓰기 줄이기 */
+  .stamp__more{ margin-left:14px; padding-left:12px; }
+  .stamp__rec{ padding:16px 14px; }
+  .stamp__rec tbody th,.stamp__rec tbody td{ padding:9px 8px; }
+  .stamp__side{ padding:22px 18px; }
+
+  /* 부스 안내도: 좁은 화면에서 여백 줄이기 */
+  .map-card{ padding:14px; }
+  .map-card figcaption{ padding:4px 4px 6px; }
+  .zone-list li{ gap:12px; padding:11px 12px; }
+  .zone-list .ico{ width:36px; height:36px; padding:7px; border-radius:11px; }
+  .zone-list b{ font-size:15.5px; }
+  .zone-list span{ font-size:14px; }
+
+  /* 일정표: 좁은 화면에서 여백·글자 줄이기 */
+  .tt-block{ padding:22px 12px; }
+  .tt-block__title{ font-size:21px; }
+  .tt-block__notice{ font-size:13px; }
+  .tt-group--lunch small{ display:block; margin-left:0; white-space:nowrap; }   /* 모바일: (점심 식사 및 휴식)은 다음 줄에 */
+  .tt-group{ gap:6px; }
+  .tt-group__label{ width:52px; font-size:15px; border-radius:12px 0 0 12px; }
+  .tt-rows > div{ grid-template-columns:7em minmax(0,1fr); gap:6px; padding:7px 10px; font-size:13.5px; }
 }

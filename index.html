@@ -4,18 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>2026 파주 과학·융합축제 과학잼(JAM)</title>
-<meta name="description" content="과학으로 즐기고, 미래로 연결하다. 2026년 10월 24일(토) 운정호수공원에서 열리는 학생 주도 과학·융합축제 과학잼(JAM)." />
+<meta name="description" content="과학으로 즐기고, 미래로 연결하다. 2026년 10월 24일(토) 운정호수공원에서 열리는 학생 주도 과학·융합축제 과학잼(JAM). 학생이 직접 운영하는 체험 부스 71개." />
 
 <!-- SNS 공유 카드 -->
 <meta property="og:title" content="2026 파주 과학·융합축제 과학잼(JAM)" />
-<meta property="og:description" content="2026.10.24.(토) 9:30~16:00 · 운정호수공원 · 체험부스 약 80개" />
+<meta property="og:description" content="2026.10.24.(토) 10:00~16:00 · 운정호수공원 · 체험 부스 71개" />
 <meta property="og:image" content="assets/img/jam-jar.png" />
 <meta property="og:type" content="website" />
 
-<link rel="icon" href="assets/img/favicon.png" />
+<link rel="icon" href="assets/img/favicon.png?v=20261014" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" />
+<link rel="stylesheet" href="css/style.css?v=20261014v" />
 </head>
 <body>
 
@@ -25,20 +28,20 @@
 <header class="nav" id="nav">
   <div class="nav__inner wrap">
     <a class="nav__brand" href="#top">
-      <img src="assets/img/jam-jar-small.png" alt="" width="28" height="33" />
-      <span>과학잼<em>JAM</em></span>
+      <img src="assets/img/jam-jar-small.png?v=20261014" alt="" width="28" height="33" />
+      <span class="jam-name"><span class="n1">파주</span> <span class="n2">과학</span><span class="n3">잼</span><span class="n4">(JAM)</span></span>
     </a>
 
     <nav class="nav__menu" id="navMenu" aria-label="주요 메뉴">
       <a href="#about">축제 소개</a>
-      <a href="#zone">체험 존</a>
-      <a href="#schedule">일정표</a>
-      <a href="#booths">부스 탐색</a>
+      <a href="#schedule">시간표</a>
+      <a href="#booth-map">부스 안내도</a>
       <a href="#stamp">스탬프 투어</a>
       <a href="#location">오시는 길</a>
+      <a class="nav__menu-cta" href="#booths">부스 찾기</a>
     </nav>
 
-    <a class="btn btn--sm btn--primary nav__cta" href="assets/pdf/booth-guide.pdf" download>리플렛 받기</a>
+    <a class="btn btn--sm btn--primary nav__cta" href="#booths">부스 찾기</a>
 
     <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="메뉴 열기">
       <span></span><span></span><span></span>
@@ -52,73 +55,143 @@
 <section class="hero" id="top">
   <div class="hero__blob hero__blob--red" aria-hidden="true"></div>
   <div class="hero__blob hero__blob--blue" aria-hidden="true"></div>
+  <div class="hero__stars" id="heroStars" aria-hidden="true"></div>
+  <div class="hero__garland" aria-hidden="true">
+  <svg class="garland garland--left" viewBox="0 0 900 230" aria-hidden="true" focusable="false">
+  <path d="M-10 18 Q300 96 600 -6" fill="none" stroke="#7C86C8" stroke-width="3" stroke-linecap="round"/>
+  <g class="pom" style="--d:0.1s"><path d="M27 27 V79" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="27" cy="109" r="25" fill="#EE6A3B"/>
+  <path d="M24.0 115.0L13.1 136.9M39.1 114.6L53.9 121.8M39.2 113.3L53.2 118.6M22.0 111.0L1.4 120.1M11.0 117.0L1.9 121.7M29.6 123.4L32.7 141.5M17.4 103.6L-2.4 93.1M45.0 114.1L55.3 117.2M31.1 113.8L45.3 131.9M30.2 101.9L39.7 80.3M20.3 100.6L7.3 85.0M32.2 110.8L53.8 119.8M22.3 98.2L14.7 82.0M16.9 102.6L1.9 93.7M31.6 93.3L35.2 80.8M15.4 102.8L-2.2 93.9M26.0 99.5L22.9 75.5M35.6 116.4L50.9 130.4M34.4 119.0L43.2 131.4M18.8 93.8L11.9 81.7M34.0 101.9L49.7 86.3M15.5 100.9L2.0 91.8M37.9 91.7L43.5 83.0M24.3 104.0L10.8 81.4M14.6 92.0L7.6 82.7M24.8 119.3L20.3 139.6M39.2 110.4L55.5 112.8M31.2 112.4L51.0 130.3M33.1 114.9L47.8 130.5M31.2 104.5L48.1 86.8M9.0 102.9L-3.8 98.8M33.1 101.9L46.9 86.0M15.1 123.5L6.1 134.6M31.5 114.7L44.1 132.3M28.5 121.1L30.4 139.7M26.8 113.3L24.8 138.7M17.7 118.8L4.5 133.1M22.4 96.6L15.7 79.6M24.8 103.9L12.4 79.2M30.7 90.1L33.2 76.9M18.5 115.6L5.2 126.4M23.5 104.6L8.6 87.8M29.0 115.7L34.8 137.4M31.4 110.2L54.1 118.0M35.6 115.0L49.5 125.2M37.5 98.3L47.2 88.5M27.0 118.9L26.7 138.5M40.4 121.6L51.2 132.1M15.0 111.4L-0.3 114.7M35.3 114.8L50.5 126.2M30.6 102.4L40.4 84.3M39.8 104.7L54.3 100.1M22.4 107.4L-2.5 100.5M45.7 106.2L58.7 104.4M26.4 119.2L25.2 137.2M29.0 95.6L31.6 76.7M23.2 115.9L11.6 137.2M45.6 107.0L59.5 105.6M34.1 93.5L39.2 82.4M16.9 107.6L-0.4 105.6M36.1 110.3L55.9 113.8M20.0 89.7L16.5 80.4M46.4 100.7L57.9 95.9M21.8 114.8L8.1 130.5M29.8 116.1L37.5 138.3M42.0 97.9L51.9 90.8M17.0 94.2L11.1 85.7M16.8 92.2L10.0 81.4M27.2 96.3L27.2 80.0M29.6 99.0L35.1 77.3" stroke="#EE6A3B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M37.7 106.8l3.9 1.5M26.2 102.5l-1.8 -2.8M42.6 98.2l3.4 -0.7M42.9 106.8l4.0 -0.3M29.4 111.1l3.2 5.0M6.3 105.2l-3.5 -2.5M30.4 102.4l0.9 -3.7M28.0 123.1l0.6 3.7M41.3 123.9l2.9 2.8M9.3 98.4l-2.2 -3.6M13.8 108.6l-3.9 2.5M21.1 111.1l-3.0 0.1M32.9 119.5l2.1 4.7M21.1 120.4l-3.4 3.2M38.1 117.3l3.5 1.5M29.0 95.9l2.0 -4.2M37.1 102.6l4.1 -2.5M10.7 107.5l-4.3 -0.5M6.0 111.7l-4.8 -1.6M34.7 105.8l4.6 0.8M30.2 103.9l1.6 -3.0M34.1 112.1l2.5 2.0M31.5 88.7l1.6 -3.1M24.1 103.8l-0.0 -5.6M31.3 129.9l0.9 4.1M46.4 107.5l3.4 -0.5" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+  <g class="pom" style="--d:0.4s"><path d="M120 43 V105" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="120" cy="129" r="20" fill="#F7D35A"/>
+  <path d="M111.7 128.0L96.8 126.6M114.3 140.8L110.5 149.0M110.9 125.7L98.9 121.4M114.0 139.1L107.7 150.2M135.0 135.3L143.5 139.0M124.7 127.9L142.7 124.7M133.2 132.2L142.4 134.6M126.1 135.5L137.9 148.1M122.7 122.5L129.3 108.1M129.5 123.4L142.0 116.4M123.4 131.1L141.2 142.4M115.7 130.9L96.0 140.8M110.3 118.2L104.8 112.0M122.5 125.3L136.0 108.2M112.0 131.1L96.1 135.9M126.2 125.6L140.1 118.7M113.1 127.7L97.5 125.0M122.0 132.4L131.9 148.4M116.9 135.9L110.0 152.6M117.2 138.7L114.1 151.0M117.6 132.0L106.4 147.9M133.0 130.1L144.4 131.2M123.4 138.0L129.6 153.5M131.1 137.7L138.7 143.8M105.1 129.3L95.8 129.6M107.1 128.3L93.0 127.7M111.7 141.0L105.7 150.1M113.9 122.1L104.2 110.9M124.8 130.6L140.9 136.3M119.4 121.9L118.5 106.0M132.4 136.3L142.4 142.1M116.3 122.4L108.6 108.4M117.2 138.1L113.7 150.8M113.1 131.2L94.6 137.7M130.4 127.0L142.7 124.8M127.3 127.2L143.0 123.7M128.4 128.9L144.1 129.0M113.5 128.7L95.3 128.4M126.8 129.0L142.3 129.5M116.4 131.3L101.8 141.9M117.5 135.1L111.4 152.3M106.5 126.4L94.9 124.2M116.5 114.0L114.7 105.4M112.1 143.6L109.3 149.1M117.8 116.9L116.2 106.8M127.6 115.6L132.6 107.2M118.3 114.6L117.5 106.2M109.6 127.3L94.0 124.9M124.6 115.2L128.1 105.4M129.6 121.0L139.6 113.0M120.3 132.8L122.6 151.4M116.6 132.6L103.0 148.9M108.7 124.5L96.4 119.8M115.5 119.7L110.4 108.8M123.7 115.9L127.0 105.4M107.8 126.1L97.9 123.9M119.2 121.9L117.9 106.5M118.5 142.0L117.5 151.8M118.7 112.4L118.2 104.4M112.4 135.5L101.0 145.9M121.0 117.1L122.4 103.8M124.7 131.4L140.4 139.7M119.4 121.2L118.7 104.0M124.1 129.2L143.1 130.7M113.8 117.6L107.8 106.5M117.1 138.9L113.6 152.3M114.7 129.9L94.0 134.4M124.9 144.5L128.1 154.1M129.4 129.9L145.6 131.7M129.1 126.9L142.7 124.2" stroke="#F7D35A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M124.0 145.4l0.6 3.6M126.4 137.0l5.3 2.5M124.2 119.5l3.6 -4.4M121.7 145.1l2.8 3.4M129.8 129.0l4.3 -0.9M124.7 134.8l1.1 3.8M133.9 129.0l5.0 -2.4M131.9 122.8l4.3 -3.7M113.8 135.0l-4.6 3.8M113.9 135.8l-0.6 3.8M132.1 138.0l1.5 3.5M119.8 135.4l1.7 4.2M107.6 141.2l-5.2 2.3M108.4 116.6l-3.7 -4.5M119.2 125.7l-1.3 -5.0M120.0 116.4l-1.9 -3.3M123.7 126.9l3.5 -2.7M115.6 142.1l-0.1 5.9M115.8 122.9l-3.1 -3.5M122.2 133.1l0.1 3.6M113.9 128.9l-4.8 -3.1M115.4 130.2l-2.5 2.6M117.7 132.0l-1.1 3.6M105.0 121.9l-5.0 -1.7M110.7 134.3l-3.1 2.8M126.0 131.4l5.9 -0.3" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+  <g class="pom" style="--d:0.7s"><path d="M218 51 V115" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="218" cy="145" r="25" fill="#7C86C8"/>
+  <path d="M203.1 144.8L185.3 144.4M219.9 153.8L224.2 173.5M208.4 152.1L191.1 164.7M229.0 129.7L234.1 122.5M233.9 148.3L250.3 151.7M204.0 147.4L190.8 149.7M202.7 157.5L192.8 165.6M230.7 128.9L235.9 122.1M223.5 149.5L241.8 164.5M209.7 126.8L204.8 116.0M207.7 131.4L199.8 120.8M213.1 143.4L187.4 134.8M220.2 164.6L221.5 176.4M215.8 151.3L208.4 172.5M207.5 133.0L199.5 123.7M229.9 150.7L246.1 158.4M211.8 150.4L194.2 165.3M227.5 145.7L248.3 147.1M232.7 141.2L249.8 136.7M209.8 146.4L189.3 149.6M233.7 141.1L246.6 137.9M230.6 146.8L249.4 149.4M210.4 149.3L190.3 160.3M225.4 141.3L242.8 132.5M212.0 154.8L201.4 172.0M223.7 161.8L228.3 175.4M210.1 144.8L184.6 144.1M211.2 161.8L207.1 171.9M221.1 161.9L223.3 174.0M230.1 141.3L245.5 136.5M219.9 156.3L223.3 176.2M224.6 142.9L246.5 135.6M222.8 165.1L224.6 172.8M223.2 146.8L246.4 154.7M233.3 133.7L243.7 126.0M237.9 144.8L247.6 144.6M225.9 163.4L230.7 174.6M233.2 148.2L247.3 151.0M211.0 152.2L197.9 165.5M227.1 145.2L247.7 145.6M224.3 143.3L250.1 135.9M220.8 155.1L226.6 176.4M223.1 134.6L230.2 120.0M207.5 146.8L185.4 150.6M221.7 154.9L229.6 176.0M229.1 147.2L249.9 151.2M218.6 139.9L220.9 117.4M236.2 152.6L244.9 156.2M217.7 125.8L217.5 115.4M215.2 165.2L213.7 176.1M216.8 161.4L215.8 174.5M217.3 149.6L212.9 176.8M231.0 137.6L246.8 128.4M226.3 146.3L248.1 149.7M237.5 139.6L246.9 137.1M218.0 156.7L217.8 175.6M224.8 141.8L247.2 130.9M216.7 127.0L215.7 112.9M210.3 138.9L195.0 126.7M206.8 158.4L199.9 166.5M223.5 161.1L227.5 172.6M222.7 147.1L246.4 157.3M208.6 163.5L203.0 174.3M226.9 144.4L246.1 142.9M228.5 152.3L244.2 163.2M210.1 147.8L189.6 154.9M206.7 134.4L194.7 123.1M226.9 132.4L234.2 121.8M223.1 137.2L234.8 119.0M206.4 157.0L197.9 165.7" stroke="#7C86C8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M218.2 152.9l-1.5 3.1M209.8 140.7l-2.0 -3.7M210.5 144.7l-5.3 -1.2M223.0 144.8l4.2 1.4M229.3 127.5l1.0 -3.0M222.9 149.6l3.9 4.4M227.3 140.7l4.9 -2.7M216.9 163.2l2.3 5.4M205.6 136.5l-3.3 -1.6M222.4 150.5l2.0 3.2M214.0 139.4l-2.2 -2.1M215.2 139.1l-2.8 -2.7M221.9 131.9l-0.6 -3.1M207.2 153.5l-2.0 4.5M226.6 159.3l3.0 2.9M210.4 165.3l-1.7 3.6M211.1 153.8l-5.3 1.7M213.5 150.2l-1.8 4.9M238.6 145.8l3.9 1.7M201.2 156.3l-2.4 3.7M231.7 146.4l4.1 2.7M230.9 153.1l3.5 2.2M223.2 151.8l0.7 4.5M227.8 153.0l1.7 5.1M219.8 150.3l-1.4 5.7M214.0 145.5l-5.6 1.4" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+  <g class="pom" style="--d:1.1s"><path d="M316 50 V110" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="316" cy="134" r="20" fill="#3B3B78"/>
+  <path d="M325.5 127.4L337.3 119.4M323.3 145.9L328.2 153.7M303.6 142.5L294.3 148.8M318.4 140.0L325.6 156.0M307.2 133.1L293.3 131.6M316.0 147.3L316.3 160.5M326.4 136.9L340.7 140.7M330.0 137.6L337.8 139.5M307.0 127.8L295.4 119.4M312.6 142.7L307.2 157.5M304.8 139.6L294.2 145.0M312.2 135.6L292.6 143.6M309.1 134.6L290.1 135.8M317.6 124.6L320.1 111.6M310.8 135.0L293.4 137.9M311.4 136.1L293.9 144.3M311.7 133.9L290.7 132.5M327.3 140.7L338.2 146.9M311.5 133.8L291.4 132.4M304.2 145.3L299.4 149.9M326.2 121.0L331.7 114.1M318.2 128.5L326.4 109.5M299.6 134.9L289.3 135.5M322.9 146.2L329.3 157.0M323.3 137.4L339.4 144.4M324.2 147.1L328.5 153.8M318.0 129.1L325.6 111.7M321.4 131.1L336.2 122.9M308.0 133.8L293.6 133.3M318.2 139.3L326.8 158.3M309.2 120.2L306.0 113.4M316.9 129.1L321.1 110.1M310.3 127.8L298.6 114.3M305.2 130.3L291.0 125.2M329.0 144.3L335.7 149.5M304.7 142.8L297.4 148.5M327.0 133.4L339.6 132.7M316.7 124.7L317.9 111.3M315.6 129.9L314.7 108.1M315.5 146.2L315.2 160.9M305.2 127.8L295.6 122.0M319.8 134.2L338.6 134.4M308.9 127.9L297.5 117.8M320.0 130.9L334.1 120.0M313.6 130.9L303.2 116.0M312.7 138.1L301.2 152.9M317.6 145.3L319.8 158.7M319.2 145.5L322.7 157.5M326.4 146.1L331.2 151.5M318.7 138.0L330.7 154.4M325.4 124.0L332.4 116.7M315.5 137.9L313.5 159.2M308.2 131.0L292.5 124.5M300.8 139.6L291.8 143.0M315.9 149.6L316.0 156.4M307.0 132.4L293.0 129.5M328.7 139.1L336.5 142.1M300.6 129.1L294.2 127.0M319.4 145.2L323.4 157.4M306.8 123.0L301.4 116.3M313.0 141.2L307.7 154.9M326.5 125.2L335.4 117.8M330.5 134.7L341.4 135.1M302.7 137.0L292.1 139.4M316.5 139.1L319.3 157.0M323.6 136.1L340.7 140.3M310.8 120.2L307.2 110.1M314.7 145.0L313.4 158.2M318.3 123.9L321.4 111.4M305.5 121.4L301.3 116.1" stroke="#3B3B78" stroke-width="2" stroke-linecap="round"/>
+  <path d="M317.7 132.3l1.8 -3.3M315.1 117.0l-1.3 -5.1M321.3 129.0l3.6 -1.0M306.8 124.5l-0.9 -4.9M300.6 137.1l-5.0 -1.2M303.1 139.4l-3.8 2.8M318.7 145.9l-0.8 3.1M317.5 136.3l0.5 3.3M313.2 137.9l-0.1 3.1M311.5 122.6l-0.4 -5.1M326.4 138.8l2.9 2.9M322.7 119.3l2.5 -2.0M330.5 125.3l2.1 -2.6M318.0 136.0l2.6 4.9M305.6 122.7l-4.1 -2.7M319.0 136.4l5.1 1.4M312.0 142.3l-0.4 3.0M313.0 147.4l0.0 4.1M325.8 131.8l5.5 -0.5M324.5 135.8l3.7 2.1M308.1 145.1l-1.2 4.4M318.3 131.2l1.7 -5.2M321.3 134.2l4.4 2.9M325.8 134.4l4.1 1.7M319.8 143.4l0.1 4.0M314.7 151.2l1.0 3.7" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+  <g class="pom" style="--d:1.4s"><path d="M413 40 V96" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="413" cy="126" r="25" fill="#FBEDB9"/>
+  <path d="M409.1 113.9L404.2 99.1M409.2 121.5L391.9 101.5M407.3 109.4L402.8 96.3M406.2 134.7L394.6 149.5M417.6 122.2L438.5 105.0M420.8 127.2L441.9 130.5M423.4 118.5L437.3 108.6M419.3 120.4L435.7 105.7M396.4 122.6L381.5 119.6M406.8 117.8L395.1 102.4M423.4 141.2L430.7 152.1M412.7 118.7L411.5 95.7M415.1 112.0L417.2 97.9M394.5 130.5L384.8 132.8M416.4 134.8L424.5 155.6M417.0 120.1L428.9 102.2M413.2 135.8L413.5 156.7M418.3 134.3L428.3 150.3M429.4 123.4L440.9 121.6M419.0 124.5L442.1 118.9M430.6 124.2L444.9 122.7M405.9 129.0L384.2 138.4M419.2 130.9L436.5 144.6M423.9 128.3L444.7 132.8M408.6 114.0L402.1 96.5M406.4 127.5L382.6 133.1M399.2 135.4L385.7 144.6M400.4 131.9L384.0 139.6M405.8 129.9L384.9 141.1M425.6 114.1L436.2 104.2M422.5 113.4L431.9 100.8M403.8 128.7L383.0 134.9M422.4 132.5L439.4 144.6M409.6 111.5L406.4 97.6M402.4 131.5L385.3 140.4M399.9 134.4L385.1 143.8M419.3 139.9L426.2 155.4M403.4 134.0L387.4 147.5M426.1 129.1L440.8 132.7M417.0 106.3L419.1 95.8M424.3 134.2L437.9 144.2M410.4 113.3L406.6 95.2M419.3 114.4L427.4 99.5M420.6 123.4L443.1 115.8M399.7 136.6L390.9 143.7M423.4 124.9L440.8 123.2M411.3 136.9L408.8 153.3M403.1 131.5L385.3 141.5M407.7 133.1L395.7 149.1M412.0 106.0L411.4 95.2M416.5 143.3L418.9 155.3M414.6 132.4L420.7 157.3M418.5 112.0L424.2 97.6M405.4 122.8L382.2 113.3M404.0 137.9L393.4 151.9M418.0 114.8L424.9 99.1M406.8 124.0L381.9 116.2M401.7 140.6L395.2 149.0M406.9 132.0L391.6 147.1M414.8 130.1L425.6 155.3M411.4 134.3L407.3 154.8M401.6 127.4L381.9 130.0M407.4 117.1L395.1 98.0M416.4 121.6L432.9 100.1M427.5 116.2L436.6 110.1M420.3 112.9L426.6 101.8M433.2 127.4L444.5 128.2M413.0 132.1L413.0 154.4M414.8 143.2L416.1 155.5M424.2 141.8L431.6 152.4" stroke="#FBEDB9" stroke-width="2" stroke-linecap="round"/>
+  <path d="M423.1 143.7l0.9 4.7M403.0 108.1l-0.6 -5.3M418.4 141.6l0.2 4.6M394.3 133.5l-3.7 2.9M413.6 131.6l2.6 3.6M407.3 127.1l-4.4 0.9M393.8 121.1l-2.4 -1.8M399.4 128.7l-4.9 -1.0M405.1 133.8l-1.6 5.7M403.0 114.3l-1.7 -2.6M404.3 106.6l0.6 -3.9M400.6 125.1l-5.0 2.7M410.0 111.1l0.9 -3.9M404.9 135.1l-4.0 2.3M415.8 137.1l0.8 4.2M417.1 118.2l2.0 -5.1M404.7 125.7l-3.7 -2.5M402.6 110.7l-2.9 -2.7M408.6 139.7l-3.0 3.9M429.6 130.2l5.4 1.7M421.5 128.7l3.0 -0.2M426.1 118.9l4.9 -0.7M425.6 117.9l4.4 -2.0M408.2 112.1l-3.2 -3.9M407.1 115.6l-4.4 -2.9M414.6 129.3l-0.3 5.3" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+  <g class="pom" style="--d:1.7s"><path d="M504 22 V68" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="504" cy="92" r="20" fill="#F7D35A"/>
+  <path d="M499.0 85.0L489.2 70.4M506.3 81.3L509.1 69.3M500.8 100.7L496.2 114.4M492.8 97.1L479.7 103.2M514.2 95.8L524.7 99.5M514.2 101.7L522.0 108.9M512.0 87.4L523.1 81.2M495.1 99.5L483.6 109.3M513.5 90.8L527.6 89.1M513.4 99.3L522.3 105.8M505.9 95.1L516.5 110.1M501.6 87.3L492.9 67.6M516.6 100.0L523.1 104.0M516.8 93.5L526.8 94.6M503.1 86.0L501.4 69.8M505.7 79.2L507.7 66.1M503.1 87.4L500.6 67.1M501.3 82.7L497.0 66.3M503.3 108.4L503.1 117.5M507.5 92.3L528.9 93.8M505.7 87.8L513.4 70.5M503.0 86.3L500.4 66.0M499.4 92.4L480.0 94.1M495.4 87.8L481.2 80.5M512.4 103.2L518.4 110.8M496.4 82.6L489.0 73.0M493.2 101.2L483.7 109.5M506.1 81.2L508.8 69.1M519.0 98.2L527.4 101.5M507.5 85.0L515.4 69.9M518.2 90.0L528.5 88.5M500.4 100.7L494.3 116.6M494.7 100.9L485.9 109.5M515.1 83.4L522.4 77.8M510.8 92.1L527.9 92.3M491.5 84.6L481.2 78.4M517.8 95.9L528.8 98.9M511.2 83.8L519.5 74.7M512.2 80.6L518.8 71.6M510.8 87.8L523.0 80.4M490.4 87.4L482.0 84.4M503.8 76.1L503.8 68.8M493.9 84.2L484.7 76.9M505.6 98.7L510.7 116.8M506.2 82.7L509.6 70.3M508.5 79.1L511.8 70.3M490.2 84.6L480.6 79.4M493.9 90.7L479.1 88.6M506.0 97.7L512.3 113.3M501.2 84.0L496.2 68.4M495.2 98.0L485.1 105.1M519.9 96.7L526.7 98.6M513.1 99.4L524.1 108.0M510.1 101.6L516.9 111.8M499.9 91.6L481.7 89.3M518.7 91.1L528.1 90.6M497.3 89.1L480.2 81.5M489.4 99.3L480.7 103.6M510.6 77.2L513.5 70.9M509.8 93.5L526.0 97.4M507.4 94.2L525.2 104.5M510.4 85.0L522.1 72.7M507.5 89.6L524.8 78.7M499.6 95.1L482.4 108.1M503.2 103.1L502.6 117.2M515.7 88.7L526.8 85.6M498.3 93.9L478.4 100.6M510.3 91.7L526.0 90.9M503.4 100.3L502.8 118.4M515.8 83.8L522.2 79.4" stroke="#F7D35A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M506.8 78.9l3.6 -3.4M508.1 93.6l3.4 4.0M500.6 85.7l-0.7 -4.7M509.6 96.6l3.7 0.8M498.7 92.6l-3.2 1.9M502.6 89.7l-3.8 -3.5M520.2 95.8l2.7 2.5M514.6 80.0l2.1 -2.7M517.6 101.7l4.0 3.8M496.4 94.3l-5.2 1.8M500.5 88.7l-3.5 -1.0M501.3 81.3l0.7 -3.4M502.8 100.8l0.6 3.4M507.8 85.6l1.8 -3.0M496.9 107.0l-2.8 1.8M519.1 97.8l5.0 0.1M496.9 93.0l-3.3 1.8M492.0 105.5l-5.6 2.0M509.4 96.0l5.7 0.5M502.7 85.1l-4.0 -4.4M506.5 84.8l-0.8 -3.3M509.0 82.8l1.5 -3.2M508.7 89.0l2.6 -3.9M509.9 105.1l3.7 3.6M507.1 93.8l4.3 2.3M502.9 97.6l-1.9 4.5" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+  <g class="pom" style="--d:2.0s"><path d="M588 -2 V50" stroke="#7C86C8" stroke-width="2"/>
+  <circle cx="588" cy="82" r="26" fill="#EE6A3B"/>
+  <path d="M593.7 68.1L599.6 53.5M604.2 89.1L617.4 94.9M587.0 76.3L581.9 47.9M578.0 98.9L570.2 112.1M582.9 82.2L552.8 83.6M568.1 85.0L557.2 86.6M595.6 99.9L600.4 111.3M593.9 91.7L605.2 110.5M601.9 82.4L620.3 82.9M581.1 81.3L554.1 78.7M596.1 63.7L600.8 53.2M585.2 70.8L579.7 48.8M606.7 89.6L620.9 95.3M574.2 82.5L555.2 83.1M583.0 80.8L553.3 73.7M589.3 89.9L592.9 111.7M587.9 101.2L587.9 111.6M602.1 91.8L613.2 99.5M603.3 83.7L620.9 85.7M571.0 79.5L558.2 77.7M599.9 69.3L608.3 60.3M597.6 91.4L611.4 104.8M586.7 88.8L582.1 113.5M597.9 93.5L610.8 108.5M597.0 93.9L608.6 109.3M597.9 98.6L606.2 112.4M578.7 89.9L561.3 104.4M576.4 80.1L553.0 76.3M589.8 71.4L593.2 51.5M581.6 92.7L569.8 112.7M595.0 62.3L599.6 49.4M591.3 77.3L606.9 55.2M608.5 76.4L617.9 73.9M573.9 89.5L560.0 96.9M582.1 80.9L556.4 75.8M582.8 81.9L557.7 81.1M606.1 78.5L622.8 75.3M575.2 67.9L564.5 55.9M592.0 78.4L613.1 59.8M586.3 98.7L584.9 113.0M567.7 76.5L555.8 73.2M587.9 96.0L587.9 114.2M597.4 79.0L617.9 72.5M583.8 76.5L568.0 55.4M601.3 78.2L618.0 73.5M574.1 85.0L558.3 88.4M593.1 87.0L610.3 104.0M579.8 87.5L562.2 99.2M600.3 89.6L617.6 100.3M576.6 72.6L562.1 60.6M593.2 98.5L597.8 112.9M573.1 77.4L557.0 72.4M584.6 90.4L576.5 110.7M576.5 81.1L554.9 79.4M599.0 82.8L622.9 84.6M589.0 96.6L590.3 114.5M583.2 103.7L581.2 112.6M589.0 74.5L592.1 52.4M596.7 72.9L608.6 60.4M578.4 90.1L562.0 104.1M594.8 87.6L615.5 104.6M587.5 74.5L585.7 50.5M578.0 95.4L568.0 108.7M599.3 66.4L607.2 55.5M586.7 64.2L585.6 47.8M569.6 84.9L554.4 87.3M594.0 78.4L618.1 64.1M606.3 82.5L621.2 82.9M566.3 82.3L554.9 82.4M571.8 91.2L557.5 99.3" stroke="#EE6A3B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M579.3 75.1l-3.5 -2.5M586.4 72.8l-0.4 -4.2M580.6 88.6l-5.1 1.6M575.6 82.0l-3.5 0.8M597.3 94.0l4.3 1.9M596.7 77.2l5.5 -0.5M595.2 80.1l4.2 1.0M592.2 82.3l4.7 0.3M604.9 72.7l4.6 0.4M574.1 80.5l-5.1 0.1M578.2 94.1l-3.8 1.4M581.7 69.4l-1.9 -2.7M575.9 90.7l-4.7 0.8M601.0 79.1l4.3 -0.3M598.3 81.8l4.3 1.6M592.7 90.6l0.6 5.9M582.5 81.6l-5.4 -1.7M598.2 60.5l1.9 -5.3M593.1 89.7l2.5 3.8M590.6 88.5l1.3 4.7M573.6 101.0l-0.5 4.9M571.4 92.4l-3.7 1.3M597.5 82.2l5.5 0.7M584.4 75.7l-2.0 -4.0M586.3 98.6l-2.9 3.5M577.5 76.7l-3.4 -0.2" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/></g>
+              </svg>
+  <div class="hero__hangs">
+    <span class="hang" style="--h:110px; --d:0.0s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:78px; --d:0.7s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:126px; --d:1.4s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:70px; --d:2.1s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:104px; --d:2.8s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:88px; --d:0.5s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:120px; --d:1.2s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:74px; --d:1.9s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:98px; --d:2.6s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+    <span class="hang" style="--h:82px; --d:0.3s"><svg viewBox="-12.5 -12.5 25 25" focusable="false"><path d="M0.0 -12.0L3.1 -4.2L11.4 -3.7L4.9 1.6L7.1 9.7L0.0 5.2L-7.1 9.7L-4.9 1.6L-11.4 -3.7L-3.1 -4.2Z"/></svg></span>
+  </div>
+  <svg class="garland garland--right" viewBox="0 0 940 230" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="gf-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F05A6B"/><stop offset="1" stop-color="#E23C4B"/></linearGradient>
+  <linearGradient id="gf-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6CC9C9"/><stop offset="1" stop-color="#3B8ED1"/></linearGradient>
+  <linearGradient id="gf-o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F49A3C"/><stop offset="1" stop-color="#EE6A2A"/></linearGradient>
+  </defs>
+  <path d="M0 8 Q470 150 940 0" fill="none" stroke="#7A4A2A" stroke-width="3"/>
+  <path transform="translate(47 21) rotate(15.2)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-r)"/>
+  <path transform="translate(141 44) rotate(11.8)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-t)"/>
+  <path transform="translate(235 61) rotate(8.4)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-o)"/>
+  <path transform="translate(329 72) rotate(4.8)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-r)"/>
+  <path transform="translate(423 77) rotate(1.3)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-t)"/>
+  <path transform="translate(517 76) rotate(-2.3)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-o)"/>
+  <path transform="translate(611 69) rotate(-5.8)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-r)"/>
+  <path transform="translate(705 57) rotate(-9.3)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-t)"/>
+  <path transform="translate(799 38) rotate(-12.7)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-o)"/>
+  <path transform="translate(893 14) rotate(-16.1)" d="M-38 0H38V96L0 70-38 96Z" fill="url(#gf-r)"/>
+  </svg>
+  </div>
 
   <div class="wrap hero__inner">
     <div class="hero__text">
-      <p class="eyebrow">경기도파주교육지원청 · 2026 파주 과학·융합축제</p>
       <h1 class="hero__title">
-        과학으로 즐기고,<br />
-        <span class="hl">미래로 연결하다</span>
+        <span class="hero__slogan">과학으로 즐기고, 미래로 연결하다</span>
+        <span class="hero__year">2026</span>
+        <span class="hero__name"><span class="k">파주</span> <span class="g">과학·융합축제</span></span>
+        <span class="hero__jam"><span class="br br--l" aria-hidden="true"></span><span class="c1">과학</span><span class="c2">잼</span><span class="c3">(</span><span class="c4">JAM</span><span class="c3">)</span><span class="br br--r" aria-hidden="true"></span></span>
+        <img class="hero__title-jar" src="assets/img/jam-jar.png?v=20261014" alt="" width="860" height="1001" />
       </h1>
       <p class="hero__lead">
-        학생이 직접 기획하고 운영하는 체험부스 <b>약 80개</b>.<br />
-        하루 동안 운정호수공원이 통째로 실험실이 됩니다.
+        과학·수학·생태환경·AI·디지털 분야 <span class="nw">체험 부스 <b>71개</b> 운영</span>
       </p>
 
-      <ul class="hero__facts">
-        <li>
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="4" class="s"/><path d="M8 3v4M16 3v4M3 10h18" class="l"/><circle cx="12" cy="15.5" r="1.8" class="f"/></svg>
-          <div><b>2026. 10. 24.(토)</b><span>9:30 ~ 16:00</span></div>
-        </li>
-        <li>
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" class="s"/><circle cx="12" cy="10" r="2.6" class="f"/></svg>
-          <div><b>운정호수공원</b><span>파주시 와동동</span></div>
-        </li>
-        <li>
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.4" class="s"/><path d="M3.5 19.5c.6-3.2 2.9-5 5.5-5s4.9 1.8 5.5 5" class="l"/><path d="M16 6.5a3 3 0 0 1 0 5.6M17.5 19.5c-.2-1.7-.7-3-1.5-4" class="l"/></svg>
-          <div><b>유아·초·중·고 학생</b><span>학부모 및 지역주민</span></div>
-        </li>
-      </ul>
+      <dl class="hero__facts">
+        <div>
+          <dt>일시</dt>
+          <dd><span class="b">2026. 10. 24.(토)</span> <span class="o">10:00~16:00</span></dd>
+        </div>
+        <div>
+          <dt>장소</dt>
+          <dd>
+            <span class="b">운정호수공원</span>
+            <a class="hero__click" href="https://map.kakao.com/?q=%EC%9A%B4%EC%A0%95%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%ED%8C%8C%EC%A3%BC%EB%86%80%EC%9D%B4%EA%B5%AC%EB%A6%84" target="_blank" rel="noopener">CLICK HERE!<span class="sr-only"> 카카오맵에서 행사장 위치 보기</span></a>
+            <span class="sub">(놀이구름 옆 <span class="o">잔디광장</span>)</span>
+          </dd>
+        </div>
+        <div>
+          <dt>대상</dt>
+          <dd><span class="b">유아, 초·중·고 학생,</span> <span class="b nw">학부모 및 지역주민</span></dd>
+        </div>
+        <div>
+          <dt>주최/주관</dt>
+          <dd><span class="b">경기도파주교육지원청</span></dd>
+        </div>
+      </dl>
 
       <div class="hero__cta">
-        <a class="btn btn--primary" href="#booths">체험부스 살펴보기</a>
-        <a class="btn btn--ghost" href="assets/pdf/booth-guide.pdf" download>
-          <svg class="ico ico--btn" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 3.5-3.5M12 14l-3.5-3.5" class="l"/><path d="M5 16v2.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V16" class="l"/></svg>
-          부스 안내 리플렛(PDF)
+        <a class="btn btn--primary" href="#booths">체험부스 찾기</a>
+        <a class="btn btn--ghost" href="#booth-map">
+          <svg class="ico ico--btn" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 9.5 5l5 2.5L20 5v11.5L14.5 19l-5-2.5L4 19Z" class="l"/><path d="M9.5 5v11.5M14.5 7.5V19" class="l"/></svg>
+          부스 안내도
         </a>
       </div>
       <p class="hero__note">※ 장소·세부 일정은 사정에 따라 변경될 수 있습니다.</p>
     </div>
 
     <figure class="hero__art">
-      <img src="assets/img/jam-jar.png" alt="2026 파주 과학·융합축제 과학잼 엠블럼 - 창의·꿈·인성 별이 담긴 딸기잼 단지" width="900" height="1052" />
+      <img src="assets/img/jam-jar.png?v=20261014" alt="2026 파주 과학·융합축제 과학잼 엠블럼 - 창의·꿈·인성 별이 담긴 딸기잼 단지" width="860" height="1001" />
       <figcaption class="hero__badge">
-        <span class="hero__badge-num">80</span>
-        <span class="hero__badge-txt">개 체험부스<br />학생이 직접 운영</span>
+        <span class="hero__badge-num">71</span>
+        <span class="hero__badge-txt">개 체험 부스<br />학생이 직접 운영</span>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ===== 빠른 메뉴 ===== -->
-<section class="quick" aria-label="빠른 메뉴">
-  <div class="wrap quick__grid">
-    <a class="quick__item" href="#booths">
-      <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6" class="s"/><path d="M15 15l4.5 4.5" class="l"/><path d="M8.5 10.5h4M10.5 8.5v4" class="l"/></svg>
-      <b>부스 탐색</b><span>약 80개 체험부스</span>
-    </a>
-    <a class="quick__item" href="#schedule">
-      <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" class="s"/><path d="M12 7.5V12l3 2" class="l"/></svg>
-      <b>타임테이블</b><span>무대·부스 운영 일정</span>
-    </a>
-    <a class="quick__item" href="#zone">
-      <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 9.5 5l5 2.5L20 5v11.5L14.5 19l-5-2.5L4 19Z" class="s"/><path d="M9.5 5v11.5M14.5 7.5V19" class="l"/></svg>
-      <b>행사장 존(ZONE)</b><span>부스 위치 &amp; 편의시설</span>
-    </a>
-    <a class="quick__item" href="#location">
-      <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="10" rx="3" class="s"/><path d="M4 11h16" class="l"/><circle cx="8" cy="18" r="1.6" class="f"/><circle cx="16" cy="18" r="1.6" class="f"/></svg>
-      <b>오시는 길</b><span>주차 및 대중교통</span>
-    </a>
+<!-- ===== 인사의 말 (리플릿 2차) ===== -->
+<section class="section section--tint" id="greeting">
+  <div class="wrap greeting">
+    <div class="greeting__head">
+      <p class="eyebrow reveal">Greeting</p>
+      <h2 class="section__title reveal">인사의 말</h2>
+    </div>
+    <div class="greeting__body reveal">
+      <p>안녕하십니까?</p>
+      <p>파주의 학생들이 과학을 즐겁게 탐구하고, 서로의 생각을 나누며 미래를 함께 그려가는 「2026 파주 과학융합축제 과학잼(JAM)」 제1회를 개최하게 되어 뜻깊게 생각합니다.</p>
+      <p>이번 축제는 과학을 어렵고 멀게 느끼기보다 즐겁게 경험하고, 직접 참여하며 새로운 가능성을 발견하는 동시에 서로 다른 분야와 생각을 연결하고 융합하는 경험을 만들어가고자 합니다.</p>
+      <p>과학·수학·환경·AI·디지털 등 다양한 분야를 아우르는 체험과 탐구의 장으로, 학생들이 직접 프로그램을 기획하고 운영하며 배움의 주체로 성장할 수 있도록 준비하였습니다.</p>
+      <p>학생들이 마련한 체험 부스를 통해 과학의 원리를 탐구하고, 수학의 즐거움을 발견하며, 환경과 생태를 생각하고 AI·디지털 기술을 경험할 수 있습니다. 또한 학교와 지역사회가 함께 참여하고 소통하며 배움의 가치를 교실 밖으로 확장하는 뜻깊은 시간을 만들어가고자 합니다.</p>
+      <p>과학으로 즐기고, 미래로 연결하는 과학잼(JAM)!<br />학생들의 열정과 아이디어가 만들어가는 특별한 축제의 현장에 함께하며 학생들의 꿈과 성장을 응원해 주시기 바랍니다.</p>
+      <p>감사합니다.</p>
+      <p class="greeting__sign">2026. 10. 24.<br /><b>경기도파주교육지원청 교육장 전선아</b></p>
+    </div>
   </div>
 </section>
 
@@ -126,156 +199,178 @@
 <section class="section" id="about">
   <div class="wrap">
     <p class="eyebrow reveal">About</p>
-    <h2 class="section__title reveal">달콤한 이름에 담은 뜻,<br />과학잼(JAM)</h2>
-    <p class="section__lead reveal">
-      잼(JAM)은 즐거움과 배움이 켜켜이 쌓이는 단지이자, 서로 다른 소리가 어울리는 잼 세션(Jam Session)입니다.
-    </p>
+    <h2 class="section__title reveal">달콤한 이름에 담은 뜻, <span class="jam-name"><span class="n1">파주</span> <span class="n2">과학</span><span class="n3">잼</span><span class="n4">(JAM)</span></span></h2>
 
     <div class="jam-grid">
-      <article class="jam-card reveal">
-        <span class="jam-card__letter" style="--c:var(--jam)">J</span>
-        <img class="jam-card__img" src="assets/img/jam-j-joyful.png" alt="즐거움이 피어나다 — 색색의 사람 세 명이 두 팔을 들고 뛰어오르는 일러스트" />
-        <h3>Joyful · 즐거움이 피어나다</h3>
-        <p>체험과 탐구 속에서 학생들의 호기심과 상상이 자연스럽게 확장되고, 배움의 즐거움이 살아나는 공간</p>
+      <article class="jam-card reveal" style="--c:#EA3323">
+        <h3 class="jam-card__head"><span class="jam-card__letter">J</span>Joyful</h3>
+        <img class="jam-card__img" src="assets/img/jam-j-joyful.png" alt="색색의 사람 세 명이 두 팔을 들고 뛰어오르는 일러스트" />
+        <p>즐거움은 커지고, 배움은 연결되는<br />체험 중심의 참여형 과학축제</p>
       </article>
-      <article class="jam-card reveal">
-        <span class="jam-card__letter" style="--c:var(--lid)">A</span>
-        <img class="jam-card__img" src="assets/img/jam-a-active.png" alt="Active — 초록·주황 글씨로 쓰인 Active 로고" />
-        <h3>Active · 미래를 연결하다</h3>
-        <p>학생과 지역사회가 함께 만들어가는 역동적인 과학·융합 페스티벌</p>
+      <article class="jam-card reveal" style="--c:#377E21">
+        <h3 class="jam-card__head"><span class="jam-card__letter">A</span>Active</h3>
+        <img class="jam-card__img" src="assets/img/jam-a-active.png" alt="초록·주황 글씨로 쓰인 Active 로고" />
+        <p>학생과 지역사회가 함께 만들어가는<br />역동적인 과학·융합 페스티벌</p>
       </article>
-      <article class="jam-card reveal">
-        <span class="jam-card__letter" style="--c:var(--star)">M</span>
-        <img class="jam-card__img" src="assets/img/jam-m-mixed.png" alt="Mixed — 보라·분홍 점들이 선으로 연결된 네트워크 일러스트" />
-        <h3>Mixed · 배움을 채우다</h3>
-        <p>과학·수학·환경·AI가 어우러지는 창의적 배움과 상상의 축제</p>
+      <article class="jam-card reveal" style="--c:#ED702D">
+        <h3 class="jam-card__head"><span class="jam-card__letter">M</span>Mixed</h3>
+        <img class="jam-card__img" src="assets/img/jam-m-mixed.png" alt="보라·분홍 점들이 선으로 연결된 네트워크 일러스트" />
+        <p>과학·수학·환경·AI가 어우러지는<br />창의적 배움과 상상의 축제</p>
       </article>
     </div>
 
-    <div class="info-card reveal">
-      <h3 class="info-card__title">행사 개요</h3>
-      <dl class="info-list">
-        <div><dt>행사명</dt><dd>2026 파주 과학·융합축제 「과학잼(JAM)」</dd></div>
-        <div><dt>슬로건</dt><dd>과학으로 즐기고, 미래로 연결하다</dd></div>
-        <div><dt>일시</dt><dd>2026. 10. 24.(토) 9:30 ~ 16:00</dd></div>
-        <div><dt>장소</dt><dd>운정호수공원</dd></div>
-        <div><dt>대상</dt><dd>유아, 초·중·고 학생, 학부모 및 지역주민</dd></div>
-        <div><dt>규모</dt><dd>과학·수학·생태환경·AI·디지털 분야 체험부스 약 80개</dd></div>
-        <div><dt>주최·주관</dt><dd>경기도파주교육지원청</dd></div>
-      </dl>
-      <p class="info-card__foot">학생이 직접 기획·운영하는 체험부스를 중심으로 탐구와 체험이 살아있는 개방형 과학축제입니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 체험 존 ===== -->
-<section class="section section--tint" id="zone">
-  <div class="wrap">
-    <p class="eyebrow reveal">Zone</p>
-    <h2 class="section__title reveal">다섯 개의 잼 존</h2>
-    <p class="section__lead reveal">분야별로 나뉜 존을 따라 걸으면 하루가 자연스럽게 하나의 탐구 코스가 됩니다.</p>
-
-    <div class="zone-grid">
-      <article class="zone reveal" style="--c:var(--star); --cs:var(--star-soft)">
-        <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4Z" class="s"/><circle cx="9.5" cy="10" r="1" class="f"/><circle cx="12.5" cy="10" r="1" class="f"/><circle cx="15.5" cy="10" r="1" class="f"/></svg>
-        <h3>소통잼 ZONE</h3>
-        <p>개막식·축하공연·과학 마술쇼를 함께 즐기는 참여형 무대</p>
-      </article>
-      <article class="zone reveal" style="--c:var(--jam); --cs:var(--jam-soft)">
-        <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4M11 3v6.2L6.6 17a3 3 0 0 0 2.6 4.5h5.6A3 3 0 0 0 17.4 17L13 9.2V3" class="s"/><path d="M8.2 14.5h7.6" class="l"/><circle cx="11" cy="17.5" r="1" class="f"/><circle cx="14" cy="19" r=".8" class="f"/></svg>
-        <h3>과학잼 ZONE</h3>
-        <p>물리·화학·생명·지구과학 중심의 탐구·실험 체험</p>
-      </article>
-      <article class="zone reveal" style="--c:var(--lid); --cs:var(--lid-soft)">
-        <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" class="s"/><path d="M8 9.5h3.5M9.75 7.75v3.5" class="l"/><path d="M12.5 15.5h4M8 15.5h1.5" class="l"/><circle cx="16" cy="9.5" r="1.2" class="f"/></svg>
-        <h3>수학잼 ZONE</h3>
-        <p>원리 발견과 문제해결을 경험하는 수학 체험</p>
-      </article>
-      <article class="zone reveal" style="--c:var(--eco); --cs:var(--eco-soft)">
-        <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5c0 8-4.5 12-9 12-2.2 0-4-1.3-4-3.6C6 8.6 12 5 19 5Z" class="s"/><path d="M6 20c1.2-4 4-7 8.5-9.5" class="l"/></svg>
-        <h3>생태환경잼 ZONE</h3>
-        <p>생태환경·자원순환·탄소중립 실천 프로그램</p>
-      </article>
-      <article class="zone reveal" style="--c:var(--ai); --cs:var(--ai-soft)">
-        <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="7" width="13" height="11" rx="3.5" class="s"/><path d="M12 3.5V7M3 12h2.5M18.5 12H21" class="l"/><circle cx="9.8" cy="12" r="1.2" class="f"/><circle cx="14.2" cy="12" r="1.2" class="f"/><path d="M10 15.5h4" class="l"/></svg>
-        <h3>AI·디지털잼 ZONE</h3>
-        <p>AI·로봇·코딩·디지털 메이킹 기반 미래기술 체험</p>
-      </article>
-      <article class="zone zone--map reveal">
-        <h3>행사장 배치도</h3>
-        <p>존별 배치도는 준비되는 대로 이곳에 올라갑니다.</p>
-        <span class="tag tag--wait">준비 중</span>
-      </article>
+    <div class="jam-meaning reveal">
+      <img class="jam-meaning__img" src="assets/img/jam-jar.png?v=20261014" alt="2026 파주 과학·융합축제 과학잼 엠블럼 — 별이 담긴 딸기잼 단지" width="860" height="1001" loading="lazy" />
+      <ul class="jam-meaning__list">
+        <li style="--tag:#C52CBD; --c:#EA3323">
+          <h3><span class="jam-meaning__tag">Joy</span>즐거움이 피어나다</h3>
+          <p>체험과 탐구 속에서 학생들의 호기심과 상상이 자연스럽게 확장되고, <b>배움의 즐거움이 살아나는 공간</b></p>
+        </li>
+        <li style="--tag:#C52C20; --c:#377E21">
+          <h3><span class="jam-meaning__tag">Join</span>미래를 연결하다</h3>
+          <p>음악의 <b>잼 세션(<i>Jam Session</i>)</b>처럼, 학생·교사·학교·지역사회가 자유롭게 협력하며, 새로운 아이디어와 가치를 함께 만들어가는 <b>창의적 융합의&nbsp;장</b></p>
+        </li>
+        <li style="--tag:#6616CF; --c:#ED702D">
+          <h3><span class="jam-meaning__tag">Jam</span>배움을 채우다</h3>
+          <p>다채로운 체험과 탐구를 통해 과학·수학·환경·AI가 어우러지고, <b>배움의 경험과 성장의 즐거움이 더해지는 과학·융합 한마당</b></p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ===== 일정표 ===== -->
-<section class="section" id="schedule">
+<!-- ===== 시간표 ===== -->
+<section class="section section--tint" id="schedule">
   <div class="wrap">
     <p class="eyebrow reveal">Timetable</p>
-    <h2 class="section__title reveal">하루 일정표</h2>
-    <p class="section__lead reveal">무대 행사는 사전 예약제로, 체험부스는 타임별 예약과 현장 참여를 함께 운영합니다.</p>
+    <h2 class="section__title reveal">행사 시간표</h2>
+    <p class="section__lead reveal">무대 행사와 체험 부스 운영 시간을 확인하세요. 체험 부스는 다섯 타임으로 운영합니다.</p>
 
-    <div class="table-card reveal">
-      <table class="tt">
-        <caption class="sr-only">2026 과학잼 무대 행사 및 체험부스 운영 일정</caption>
-        <thead>
-          <tr><th scope="col">시간</th><th scope="col">무대 행사 <em>콘서트홀</em></th><th scope="col">체험부스 <em>야외</em></th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">08:30 ~ 09:50</th>
-            <td data-label="무대 행사">행사 운영 준비</td>
-            <td data-label="체험부스">부스 운영 준비 <span class="tt__tag">1타임 예약 09:50~10:00</span></td>
-          </tr>
-          <tr>
-            <th scope="row">10:00 ~ 11:00</th>
-            <td data-label="무대 행사"><b>개막식 &amp; 축하공연</b> <span class="tt__tag tt__tag--book">10:30~11:00 · 사전 예약</span></td>
-            <td data-label="체험부스">부스 운영 <span class="tt__tag">2타임 예약 10:50~11:00</span></td>
-          </tr>
-          <tr>
-            <th scope="row">11:00 ~ 12:00</th>
-            <td data-label="무대 행사">—</td>
-            <td data-label="체험부스">부스 운영</td>
-          </tr>
-          <tr class="tt__rest">
-            <th scope="row">12:00 ~ 12:50</th>
-            <td data-label="안내" colspan="2">점심시간 · 부스 정비 및 휴식 <span class="tt__tag">3타임 예약 12:50~13:00</span></td>
-          </tr>
-          <tr>
-            <th scope="row">13:00 ~ 14:00</th>
-            <td data-label="무대 행사">—</td>
-            <td data-label="체험부스">부스 운영 <span class="tt__tag">4타임 예약 13:50~14:00</span></td>
-          </tr>
-          <tr>
-            <th scope="row">14:00 ~ 15:00</th>
-            <td data-label="무대 행사"><b>과학 마술쇼</b> <span class="tt__tag tt__tag--book">사전 예약</span></td>
-            <td data-label="체험부스">부스 운영 <span class="tt__tag">5타임 예약 14:50~15:00</span></td>
-          </tr>
-          <tr>
-            <th scope="row">15:00 ~ 16:00</th>
-            <td data-label="무대 행사">—</td>
-            <td data-label="체험부스">부스 운영</td>
-          </tr>
-          <tr class="tt__rest">
-            <th scope="row">16:00 ~ 16:30</th>
-            <td data-label="안내" colspan="2">전체 행사장 정리</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="tt-wrap">
+      <section class="tt-block tt-block--stage reveal" aria-labelledby="ttStage">
+        <h3 class="tt-block__title" id="ttStage">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.5" cy="8.5" r="4.5" class="s"/><path d="M12.3 11.7 4.5 19.5l1.5 1.5 7.8-7.8" class="l"/><path d="M13 6l5.5 5.5" class="l"/></svg>
+          무대 행사
+        </h3>
 
-    <div class="note-row reveal">
-      <div class="note">
-        <b>개막식 진행</b>
-        <p>오프닝 영상 → 개회사·내빈 소개 → 인사 말씀 → 축하공연 → 부스 갤러리 워크 순서로 진행합니다.</p>
-      </div>
-      <div class="note">
-        <b>예약 안내</b>
-        <p>개막식·축하공연과 과학 마술쇼는 사전 예약으로 운영합니다. 체험부스는 타임 시작 10분 전에 예약을 받습니다.</p>
-      </div>
+        <div class="tt-group">
+          <p class="tt-group__label">개막식</p>
+          <dl class="tt-rows">
+            <div><dt>10:30 ~ 10:35</dt><dd>오프닝 영상</dd></div>
+            <div><dt>10:35 ~ 10:40</dt><dd>축하 공연</dd></div>
+            <div><dt>10:40 ~ 10:45</dt><dd>개회사 및 내빈 소개</dd></div>
+            <div><dt>10:45 ~ 10:55</dt><dd>인사말씀 및 축사</dd></div>
+            <div><dt>10:55 ~</dt><dd>부스 갤러리 워크</dd></div>
+          </dl>
+        </div>
+
+        <div class="tt-group">
+          <p class="tt-group__label">공연</p>
+          <dl class="tt-rows">
+            <div><dt>12:10 ~ 12:40</dt><dd>버블쇼</dd></div>
+            <div><dt>14:00 ~ 15:00</dt><dd>과학 마술쇼</dd></div>
+          </dl>
+        </div>
+
+        <p class="tt-block__foot"><b>버블쇼</b>는 비눗방울로 만드는 관객 참여형 공연, <b>과학&nbsp;마술쇼</b>는 공연이 끝난 뒤 마술 속 과학 원리를 함께 풀어보는 시간이 이어집니다.</p>
+      </section>
+
+      <section class="tt-block tt-block--booth reveal" aria-labelledby="ttBooth">
+        <h3 class="tt-block__title" id="ttBooth">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a5.5 5.5 0 0 0-3.2 10c.7.5 1.2 1.3 1.2 2.2V17h4v-1.3c0-.9.5-1.7 1.2-2.2A5.5 5.5 0 0 0 12 3.5Z" class="s"/><path d="M10 20h4" class="l"/><path d="M12 9v3" class="l"/></svg>
+          체험 부스
+        </h3>
+        <p class="tt-block__notice">※ (체험 부스 신청) 타임별 시작 10분 전부터 예약 시작</p>
+
+        <div class="tt-group">
+          <p class="tt-group__label">1타임</p>
+          <dl class="tt-rows">
+            <div class="is-book"><dt>09:50 ~</dt><dd>예약</dd></div>
+            <div><dt>10:00 ~ 11:00</dt><dd>부스 운영</dd></div>
+          </dl>
+        </div>
+        <div class="tt-group">
+          <p class="tt-group__label">2타임</p>
+          <dl class="tt-rows">
+            <div class="is-book"><dt>10:50 ~</dt><dd>예약</dd></div>
+            <div><dt>11:00 ~ 12:00</dt><dd>부스 운영</dd></div>
+          </dl>
+        </div>
+        <div class="tt-group tt-group--lunch">
+          <p class="tt-group__label">점심<br />시간</p>
+          <dl class="tt-rows">
+            <div><dt>12:00 ~ 13:00</dt><dd>부스 운영 정비 <small>(점심 식사 및 휴식)</small></dd></div>
+          </dl>
+        </div>
+        <div class="tt-group">
+          <p class="tt-group__label">3타임</p>
+          <dl class="tt-rows">
+            <div class="is-book"><dt>12:50 ~</dt><dd>예약</dd></div>
+            <div><dt>13:00 ~ 14:00</dt><dd>부스 운영</dd></div>
+          </dl>
+        </div>
+        <div class="tt-group">
+          <p class="tt-group__label">4타임</p>
+          <dl class="tt-rows">
+            <div class="is-book"><dt>13:50 ~</dt><dd>예약</dd></div>
+            <div><dt>14:00 ~ 15:00</dt><dd>부스 운영</dd></div>
+          </dl>
+        </div>
+        <div class="tt-group">
+          <p class="tt-group__label">5타임</p>
+          <dl class="tt-rows">
+            <div class="is-book"><dt>14:50 ~</dt><dd>예약</dd></div>
+            <div><dt>15:00 ~ 16:00</dt><dd>부스 운영</dd></div>
+          </dl>
+        </div>
+      </section>
     </div>
+  </div>
+</section>
+
+<!-- ===== 부스 안내도 ===== -->
+<section class="section" id="zone">
+  <div class="wrap">
+    <figure class="map-card reveal" id="booth-map">
+      <a href="assets/img/booth-map.jpg?v=20261013b" target="_blank" rel="noopener">
+        <img src="assets/img/booth-map.jpg?v=20261013b" alt="부스 안내도 — 무대와 놀이구름카페, 운영사무국·응급의료지원실, 운영본부, 1~71번 부스 위치와 부스별 운영 분야 아이콘. 파주놀이구름 옆 잔디광장" width="1181" height="1500" loading="lazy" />
+      </a>
+      <figcaption>
+        <div class="map-card__head">
+          <h3>부스 안내도</h3>
+          <a class="btn btn--sm btn--ghost" href="assets/img/booth-map.jpg?v=20261013b" target="_blank" rel="noopener">크게 보기</a>
+        </div>
+
+        <div class="zone-list">
+          <p class="zone-list__group">무대 행사</p>
+          <ul>
+            <li style="--c:var(--star); --cs:var(--star-soft)">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4Z" class="s"/><circle cx="9.5" cy="10" r="1" class="f"/><circle cx="12.5" cy="10" r="1" class="f"/><circle cx="15.5" cy="10" r="1" class="f"/></svg>
+              <div><b>소통잼</b><span>개막식·축하 공연·버블쇼·과학 마술쇼</span></div>
+            </li>
+          </ul>
+          <p class="zone-list__group">체험 부스</p>
+          <ul>
+            <li style="--c:var(--jam); --cs:var(--jam-soft)">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4M11 3v6.2L6.6 17a3 3 0 0 0 2.6 4.5h5.6A3 3 0 0 0 17.4 17L13 9.2V3" class="s"/><path d="M8.2 14.5h7.6" class="l"/><circle cx="11" cy="17.5" r="1" class="f"/><circle cx="14" cy="19" r=".8" class="f"/></svg>
+              <div><b>과학잼 ZONE</b><span>물리·화학·생명·지구과학 중심의 탐구·실험 체험</span></div>
+            </li>
+            <li style="--c:var(--lid); --cs:var(--lid-soft)">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" class="s"/><path d="M8 9.5h3.5M9.75 7.75v3.5" class="l"/><path d="M12.5 15.5h4M8 15.5h1.5" class="l"/><circle cx="16" cy="9.5" r="1.2" class="f"/></svg>
+              <div><b>수학잼 ZONE</b><span>원리 발견과 문제해결을 경험하는 수학 체험</span></div>
+            </li>
+            <li style="--c:var(--eco); --cs:var(--eco-soft)">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5c0 8-4.5 12-9 12-2.2 0-4-1.3-4-3.6C6 8.6 12 5 19 5Z" class="s"/><path d="M6 20c1.2-4 4-7 8.5-9.5" class="l"/></svg>
+              <div><b>생태환경잼 ZONE</b><span>생태환경·자원순환·탄소중립 실천 프로그램</span></div>
+            </li>
+            <li style="--c:var(--ai); --cs:var(--ai-soft)">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="7" width="13" height="11" rx="3.5" class="s"/><path d="M12 3.5V7M3 12h2.5M18.5 12H21" class="l"/><circle cx="9.8" cy="12" r="1.2" class="f"/><circle cx="14.2" cy="12" r="1.2" class="f"/><path d="M10 15.5h4" class="l"/></svg>
+              <div><b>AI·디지털잼 ZONE</b><span>AI·로봇·코딩·디지털 메이킹 기반 미래기술 체험</span></div>
+            </li>
+          </ul>
+        </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -283,64 +378,88 @@
 <section class="section section--tint" id="booths">
   <div class="wrap">
     <p class="eyebrow reveal">Booths</p>
-    <h2 class="section__title reveal">체험부스 탐색</h2>
-    <p class="section__lead reveal">학교·팀 이름이나 부스명을 검색하고, 분야로 좁혀서 찾아보세요.</p>
+    <h2 class="section__title reveal">체험 부스 찾기</h2>
+    <p class="section__lead reveal"><b>부스 설명서 보기</b>를 누르면 부스에 대한 자세한 설명을 볼 수 있어요.</p>
 
     <div class="finder reveal">
       <div class="finder__search">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6" class="s"/><path d="M15 15l4.5 4.5" class="l"/></svg>
         <label class="sr-only" for="boothSearch">부스 검색</label>
-        <input id="boothSearch" type="search" placeholder="예: 로봇, 슈퍼노바, 문산고" autocomplete="off" />
+        <input id="boothSearch" type="search" placeholder="예: 로봇, 화학 정원, 운정고, 15번" autocomplete="off" />
       </div>
       <div class="finder__filters" id="boothFilters" role="group" aria-label="분야 필터"></div>
+      <div class="finder__filters" id="boothAgeFilters" role="group" aria-label="체험 대상 필터"></div>
+      <div class="finder__filters" id="boothColorFilters" role="group" aria-label="부스 번호 색 필터"></div>
       <p class="finder__count" id="boothCount" aria-live="polite"></p>
     </div>
 
     <div class="booth-grid" id="boothGrid"></div>
-    <p class="booth-empty" id="boothEmpty" hidden>검색 결과가 없습니다. 다른 이름이나 분야로 찾아보세요.</p>
-
-    <div class="download reveal">
-      <div>
-        <b>부스 설명서 한 번에 보기</b>
-        <p>선정된 부스의 프로그램 설명서를 하나의 PDF로 모았습니다. 행사 전에 미리 살펴보고 동선을 짜보세요.</p>
-      </div>
-      <a class="btn btn--primary" href="assets/pdf/booth-guide.pdf" download>
-        <svg class="ico ico--btn" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 3.5-3.5M12 14l-3.5-3.5" class="l"/><path d="M5 16v2.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V16" class="l"/></svg>
-        전체 부스 설명서(PDF)
-      </a>
-    </div>
+    <p class="booth-empty" id="boothEmpty" hidden>검색 결과가 없습니다. 다른 이름이나 조건으로 찾아보세요.</p>
   </div>
 </section>
 
-<!-- ===== 스탬프 투어 ===== -->
+<!-- ===== 스탬프 투어 (종이 리플릿) ===== -->
 <section class="section" id="stamp">
   <div class="wrap stamp">
-    <div class="stamp__text">
+    <div class="stamp__head">
       <p class="eyebrow reveal">Stamp Tour</p>
-      <h2 class="section__title reveal">스탬프를 모아<br />기념품을 받아가세요</h2>
-      <p class="section__lead reveal">입구 안내 부스에서 리플렛을 받고, 체험할 때마다 부스에서 스탬프를 찍어 드립니다.</p>
-      <ul class="stamp__rule reveal">
-        <li><b>스탬프 5개 이상</b> 모으고</li>
-        <li><b>플로깅 챌린지 3회 이상</b> 인증하면</li>
-        <li>기념품 증정 <span class="tag">선착순 · 수량 소진 시 종료</span></li>
-      </ul>
-
-      <div class="hero__cta reveal" style="margin-top:26px">
-        <a class="btn btn--primary" href="stamp.html">
-          <svg class="ico ico--btn" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h8v4.2c0 1.6-2 2-2 3.3v1H10v-1c0-1.3-2-1.7-2-3.3Z" class="s"/><path d="M5.5 15.5h13a1.5 1.5 0 0 1 1.5 1.5v2.5H4V17a1.5 1.5 0 0 1 1.5-1.5Z" class="s"/></svg>
-          내 스탬프판 열기
-        </a>
-      </div>
-      <p class="hero__note">휴대폰으로 열어두면 부스에서 바로 스탬프를 받을 수 있습니다.</p>
+      <h2 class="section__title reveal">즐기고, 모으고, 지구도 지키는 과학&nbsp;여행</h2>
+      <p class="section__lead reveal">과학잼(JAM)을 즐기며 스탬프를 모아보세요!</p>
     </div>
 
-    <ul class="stamp__list reveal">
-      <li style="--c:var(--jam)"><span class="stamp__dot">2<em>개</em></span><div><b>과학잼 ZONE</b><span>2개 이상</span></div></li>
-      <li style="--c:var(--lid)"><span class="stamp__dot">1<em>개</em></span><div><b>수학잼 ZONE</b><span>1개 이상</span></div></li>
-      <li style="--c:var(--eco)"><span class="stamp__dot">1<em>개</em></span><div><b>생태환경잼 ZONE</b><span>1개 이상</span></div></li>
-      <li style="--c:var(--ai)"><span class="stamp__dot">2<em>개</em></span><div><b>AI·디지털잼 ZONE</b><span>2개 이상</span></div></li>
-      <li style="--c:var(--star)"><span class="stamp__dot">3<em>회</em></span><div><b>플로깅 챌린지</b><span>사진 인증 + 수거물 확인</span></div></li>
-    </ul>
+    <div class="stamp__cols">
+      <ol class="stamp__steps">
+        <li>
+          <div class="stamp__step"><em>운영본부</em><span>스탬프 투어 리플릿 받기 <small>(1인 1매)</small></span></div>
+        </li>
+          <li>
+          <div class="stamp__step"><em>미션 1 · 체험 부스</em><span>부스를 체험하고 스탬프 꾹! <small>(5개 이상)</small></span></div>
+          <div class="stamp__more">
+            <div class="stamp__rec">
+              <h3>권장 인증 기준</h3>
+              <p>분야별로 고르게 참여할 수 있도록 영역별 권장 인증 기준을 운영해요.</p>
+              <table>
+                <caption class="sr-only">스탬프 투어 영역별 권장 인증 기준</caption>
+                <thead><tr><th scope="col">분야</th><th scope="col">인증 기준</th></tr></thead>
+                <tbody>
+                <tr style="--c:var(--jam)"><th scope="row">과학잼 ZONE</th><td>스탬프 <b>2개</b> 이상</td></tr>
+                <tr style="--c:var(--lid)"><th scope="row">수학잼 ZONE</th><td>스탬프 <b>1개</b> 이상</td></tr>
+                <tr style="--c:var(--eco)"><th scope="row">생태환경잼 ZONE</th><td>스탬프 <b>1개</b> 이상</td></tr>
+                <tr style="--c:var(--ai)"><th scope="row">AI·디지털잼 ZONE</th><td>스탬프 <b>1개</b> 이상</td></tr>
+                <tr style="--c:var(--star)"><th scope="row">플로깅 챌린지</th><td><b>3회</b> 이상 <small>(핸드폰 인증 사진 + 수거물 확인)</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </li>
+        </ol>
+      <ol class="stamp__steps stamp__steps--next" start="3">
+        <li>
+          <div class="stamp__step"><em>미션 2 · 행사장 전체</em><span>플로깅 챌린지! 줍고, 찍고, 사진 인증하기 <small>(3회 이상)</small></span></div>
+          <div class="stamp__more">
+            <div class="stamp__side">
+              <p class="stamp__side-tag">플로깅 챌린지</p>
+              <h3 class="stamp__side-title">걷고, 줍고, 움직이는 축제</h3>
+              <p class="stamp__plog">
+                플로깅은 조깅(Jogging)과 쓰레기 줍기를 합친 환경 실천 활동입니다.
+                축제장을 거닐며 쓰레기를 줍고, 우리가 즐긴 공간을 우리 손으로 지켜요.
+                작은 실천이 모여 더 건강한 지구를 만듭니다.
+              </p>
+              <p class="stamp__plog-how">쓰레기를 주울 때마다 휴대폰으로 인증 사진을 찍어 두고, 운영본부에서 사진과 수거물을 함께 보여 주세요. <b>3회 이상</b> 인증하면 미션 완료!</p>
+            </div>
+          </div>
+        </li>
+          <li>
+          <div class="stamp__step"><em>운영본부</em><span>리플릿과 인증 사진·수거물을 보여 주고 기념품 받기</span></div>
+          <div class="stamp__more">
+            <div class="stamp__gift">
+              <b>스탬프 5개 이상 + 플로깅 챌린지 3회 이상</b> 인증 시, 기념품 제공
+              <p>※ 기념품은 선착순 지급하며, 준비 수량 소진 시 종료</p>
+            </div>
+          </div>
+        </li>
+        </ol>
+    </div>
   </div>
 </section>
 
@@ -357,27 +476,27 @@
         <div class="loc__map-ph">
           <svg class="ico ico--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" class="s"/><circle cx="12" cy="10" r="2.6" class="f"/></svg>
           <b>운정호수공원</b>
-          <span>경기도 파주시 와동동</span>
-          <a class="btn btn--sm btn--ghost" href="https://map.kakao.com/?q=운정호수공원" target="_blank" rel="noopener">카카오맵에서 열기</a>
+          <span>파주놀이구름 옆 잔디광장 인근</span>
+          <a class="btn btn--sm btn--ghost" href="https://map.kakao.com/?q=%EC%9A%B4%EC%A0%95%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%ED%8C%8C%EC%A3%BC%EB%86%80%EC%9D%B4%EA%B5%AC%EB%A6%84" target="_blank" rel="noopener">카카오맵에서 열기</a>
         </div>
       </div>
 
       <div class="loc__info">
         <article class="loc__item reveal">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="10" rx="3" class="s"/><path d="M4 11h16" class="l"/><circle cx="8" cy="18" r="1.6" class="f"/><circle cx="16" cy="18" r="1.6" class="f"/></svg>
-          <div><b>주차 안내</b><p>행사장 내 주차 공간이 협소합니다. 가급적 대중교통을 이용해 주세요. 임시 주차장과 셔틀 운행 여부는 추후 안내합니다.</p></div>
+          <div><b>주차 안내</b><p>행사 당일 운정호수공원 주변은 주차 공간이 매우 혼잡합니다.<br />가급적 대중교통이나 도보로 방문해 주세요.</p></div>
         </article>
         <article class="loc__item reveal">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-3.9 0-7 .8-7 3v8a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 15V7c0-2.2-3.1-3-7-3Z" class="s"/><path d="M5 11h14" class="l"/><circle cx="8.5" cy="14.5" r="1.1" class="f"/><circle cx="15.5" cy="14.5" r="1.1" class="f"/><path d="M8 20l-1.5 1.5M16 20l1.5 1.5" class="l"/></svg>
-          <div><b>대중교통</b><p>운정호수공원 인근 정류장 하차 후 도보 이동. 상세 노선은 행사 2주 전 가정통신문과 이 페이지에 함께 안내합니다.</p></div>
+          <div><b>대중교통</b><p>운정호수공원 인근 버스 정류장에서 내려 걸어오세요.<br />행사장은 <b>파주놀이구름 옆 잔디광장</b>입니다.<br />지도 앱에서 '파주놀이구름'으로 찾으면 편리합니다.</p></div>
         </article>
         <article class="loc__item reveal">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 19 6v6c0 4.2-3 7.4-7 8.5-4-1.1-7-4.3-7-8.5V6l7-2.5Z" class="s"/><path d="M12 9.5v5M9.5 12h5" class="l"/></svg>
-          <div><b>안전 &amp; 편의시설</b><p>행사장 중앙에 운영본부와 응급처치 공간을 운영합니다. 안전요원이 이동 동선과 밀집 구역을 관리합니다.</p></div>
+          <div><b>안전</b><p>운영본부와 응급의료지원실을 운영하고, 구급차 1대가 현장에 상시 대기합니다.</p></div>
         </article>
         <article class="loc__item reveal">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h11A1.5 1.5 0 0 1 19 5.5v13l-3-2-2 1.5-2-1.5-2 1.5-2-1.5-3 2v-13A1.5 1.5 0 0 1 6.5 4Z" class="s"/><path d="M9 9h6M9 12.5h4" class="l"/></svg>
-          <div><b>참가 방법</b><p>사전 신청 없이 현장에서 무료로 참여할 수 있습니다. 인기 부스는 타임별 예약으로 순번을 받습니다.</p></div>
+          <div><b>참가 방법</b><p>사전 신청 없이 현장에서 무료로 참여할 수 있습니다.<br />체험 부스는 타임별 시작 10분 전부터 예약을 받습니다.</p></div>
         </article>
       </div>
     </div>
@@ -390,7 +509,7 @@
 <footer class="footer">
   <div class="wrap footer__inner">
     <div class="footer__brand">
-      <img src="assets/img/jam-jar-small.png" alt="" width="40" height="47" />
+      <img src="assets/img/jam-jar-small.png?v=20261014" alt="" width="40" height="46" />
       <div>
         <b>2026 파주 과학·융합축제 과학잼(JAM)</b>
         <span>과학으로 즐기고, 미래로 연결하다</span>
@@ -398,13 +517,12 @@
     </div>
     <div class="footer__meta">
       <p>주최·주관 경기도파주교육지원청 지역교육과</p>
-      <p>문의 031-000-0000</p>
-      <p class="footer__copy">© 2026 Gyeonggi-do Paju Office of Education · <a href="admin.html" style="color:#AEB6BE">운영 관리</a></p>
+      <p class="footer__copy">© 2026 Gyeonggi-do Paju Office of Education</p>
     </div>
   </div>
 </footer>
 
-<script src="data/booths.js"></script>
-<script src="js/main.js"></script>
+<script src="data/booths.js?v=20261013a"></script>
+<script src="js/main.js?v=20261013a"></script>
 </body>
 </html>
