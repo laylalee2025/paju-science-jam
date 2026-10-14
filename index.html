@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" />
-<link rel="stylesheet" href="css/style.css?v=20261014v" />
+<link rel="stylesheet" href="css/style.css?v=20261014zf" />
 </head>
 <body>
 
@@ -29,7 +29,7 @@
   <div class="nav__inner wrap">
     <a class="nav__brand" href="#top">
       <img src="assets/img/jam-jar-small.png?v=20261014" alt="" width="28" height="33" />
-      <span class="jam-name"><span class="n1">파주</span> <span class="n2">과학</span><span class="n3">잼</span><span class="n4">(JAM)</span></span>
+      <span class="nav__name"><span class="y">2026 파주</span> <span class="b">과학·융합축제</span> <span class="jam-name"><span class="n2">과학</span><span class="n3">잼</span><span class="n4">(JAM)</span></span></span>
     </a>
 
     <nav class="nav__menu" id="navMenu" aria-label="주요 메뉴">
@@ -38,6 +38,7 @@
       <a href="#booth-map">부스 안내도</a>
       <a href="#stamp">스탬프 투어</a>
       <a href="#location">오시는 길</a>
+      <a href="#poster">포스터</a>
       <a class="nav__menu-cta" href="#booths">부스 찾기</a>
     </nav>
 
@@ -123,7 +124,7 @@
     <div class="hero__text">
       <h1 class="hero__title">
         <span class="hero__slogan">과학으로 즐기고, 미래로 연결하다</span>
-        <span class="hero__year">2026</span>
+        <span class="hero__yearline"><span class="hero__year">2026</span><span class="hero__ord">제1회</span></span>
         <span class="hero__name"><span class="k">파주</span> <span class="g">과학·융합축제</span></span>
         <span class="hero__jam"><span class="br br--l" aria-hidden="true"></span><span class="c1">과학</span><span class="c2">잼</span><span class="c3">(</span><span class="c4">JAM</span><span class="c3">)</span><span class="br br--r" aria-hidden="true"></span></span>
         <img class="hero__title-jar" src="assets/img/jam-jar.png?v=20261014" alt="" width="860" height="1001" />
@@ -142,7 +143,7 @@
           <dd>
             <span class="b">운정호수공원</span>
             <a class="hero__click" href="https://map.kakao.com/?q=%EC%9A%B4%EC%A0%95%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%ED%8C%8C%EC%A3%BC%EB%86%80%EC%9D%B4%EA%B5%AC%EB%A6%84" target="_blank" rel="noopener">CLICK HERE!<span class="sr-only"> 카카오맵에서 행사장 위치 보기</span></a>
-            <span class="sub">(놀이구름 옆 <span class="o">잔디광장</span>)</span>
+            <span class="sub">(파주놀이구름 옆 <span class="o">잔디광장</span>)</span>
           </dd>
         </div>
         <div>
@@ -255,12 +256,13 @@
 
         <div class="tt-group">
           <p class="tt-group__label">개막식</p>
-          <dl class="tt-rows">
-            <div><dt>10:30 ~ 10:35</dt><dd>오프닝 영상</dd></div>
-            <div><dt>10:35 ~ 10:40</dt><dd>축하 공연</dd></div>
-            <div><dt>10:40 ~ 10:45</dt><dd>개회사 및 내빈 소개</dd></div>
-            <div><dt>10:45 ~ 10:55</dt><dd>인사말씀 및 축사</dd></div>
-            <div><dt>10:55 ~</dt><dd>부스 갤러리 워크</dd></div>
+          <dl class="tt-rows tt-rows--merged">
+            <dt>10:30 ~ 11:00</dt>
+            <dd>오프닝 영상</dd>
+            <dd>축하 공연</dd>
+            <dd>개회사 및 내빈 소개</dd>
+            <dd>인사말씀 및 축사</dd>
+            <dd>부스 갤러리 워크</dd>
           </dl>
         </div>
 
@@ -346,26 +348,26 @@
           <ul>
             <li style="--c:var(--star); --cs:var(--star-soft)">
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4Z" class="s"/><circle cx="9.5" cy="10" r="1" class="f"/><circle cx="12.5" cy="10" r="1" class="f"/><circle cx="15.5" cy="10" r="1" class="f"/></svg>
-              <div><b>소통잼</b><span>개막식·축하 공연·버블쇼·과학 마술쇼</span></div>
+              <div><b>소통잼(JAM)</b><span>개막식·축하 공연·버블쇼·과학 마술쇼</span></div>
             </li>
           </ul>
           <p class="zone-list__group">체험 부스</p>
           <ul>
             <li style="--c:var(--jam); --cs:var(--jam-soft)">
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4M11 3v6.2L6.6 17a3 3 0 0 0 2.6 4.5h5.6A3 3 0 0 0 17.4 17L13 9.2V3" class="s"/><path d="M8.2 14.5h7.6" class="l"/><circle cx="11" cy="17.5" r="1" class="f"/><circle cx="14" cy="19" r=".8" class="f"/></svg>
-              <div><b>과학잼 ZONE</b><span>물리·화학·생명·지구과학 중심의 탐구·실험 체험</span></div>
+              <div><b>과학잼(JAM)</b><span>물리·화학·생명·지구과학 중심의 탐구·실험 체험</span></div>
             </li>
             <li style="--c:var(--lid); --cs:var(--lid-soft)">
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" class="s"/><path d="M8 9.5h3.5M9.75 7.75v3.5" class="l"/><path d="M12.5 15.5h4M8 15.5h1.5" class="l"/><circle cx="16" cy="9.5" r="1.2" class="f"/></svg>
-              <div><b>수학잼 ZONE</b><span>원리 발견과 문제해결을 경험하는 수학 체험</span></div>
+              <div><b>수학잼(JAM)</b><span>원리 발견과 문제해결을 경험하는 수학 체험</span></div>
             </li>
             <li style="--c:var(--eco); --cs:var(--eco-soft)">
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5c0 8-4.5 12-9 12-2.2 0-4-1.3-4-3.6C6 8.6 12 5 19 5Z" class="s"/><path d="M6 20c1.2-4 4-7 8.5-9.5" class="l"/></svg>
-              <div><b>생태환경잼 ZONE</b><span>생태환경·자원순환·탄소중립 실천 프로그램</span></div>
+              <div><b>생태환경잼(JAM)</b><span>생태환경·자원순환·탄소중립 실천 프로그램</span></div>
             </li>
             <li style="--c:var(--ai); --cs:var(--ai-soft)">
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="7" width="13" height="11" rx="3.5" class="s"/><path d="M12 3.5V7M3 12h2.5M18.5 12H21" class="l"/><circle cx="9.8" cy="12" r="1.2" class="f"/><circle cx="14.2" cy="12" r="1.2" class="f"/><path d="M10 15.5h4" class="l"/></svg>
-              <div><b>AI·디지털잼 ZONE</b><span>AI·로봇·코딩·디지털 메이킹 기반 미래기술 체험</span></div>
+              <div><b>AI·디지털잼(JAM)</b><span>AI·로봇·코딩·디지털 메이킹 기반 미래기술 체험</span></div>
             </li>
           </ul>
         </div>
@@ -422,10 +424,10 @@
                 <caption class="sr-only">스탬프 투어 영역별 권장 인증 기준</caption>
                 <thead><tr><th scope="col">분야</th><th scope="col">인증 기준</th></tr></thead>
                 <tbody>
-                <tr style="--c:var(--jam)"><th scope="row">과학잼 ZONE</th><td>스탬프 <b>2개</b> 이상</td></tr>
-                <tr style="--c:var(--lid)"><th scope="row">수학잼 ZONE</th><td>스탬프 <b>1개</b> 이상</td></tr>
-                <tr style="--c:var(--eco)"><th scope="row">생태환경잼 ZONE</th><td>스탬프 <b>1개</b> 이상</td></tr>
-                <tr style="--c:var(--ai)"><th scope="row">AI·디지털잼 ZONE</th><td>스탬프 <b>1개</b> 이상</td></tr>
+                <tr style="--c:var(--jam)"><th scope="row">과학잼(JAM)</th><td>스탬프 <b>2개</b> 이상</td></tr>
+                <tr style="--c:var(--lid)"><th scope="row">수학잼(JAM)</th><td>스탬프 <b>1개</b> 이상</td></tr>
+                <tr style="--c:var(--eco)"><th scope="row">생태환경잼(JAM)</th><td>스탬프 <b>1개</b> 이상</td></tr>
+                <tr style="--c:var(--ai)"><th scope="row">AI·디지털잼(JAM)</th><td>스탬프 <b>1개</b> 이상</td></tr>
                 <tr style="--c:var(--star)"><th scope="row">플로깅 챌린지</th><td><b>3회</b> 이상 <small>(핸드폰 인증 사진 + 수거물 확인)</small></td></tr>
                 </tbody>
               </table>
@@ -503,6 +505,21 @@
   </div>
 </section>
 
+<!-- ===== 포스터 ===== -->
+<section class="section" id="poster">
+  <div class="wrap poster">
+    <div class="poster__text">
+      <p class="eyebrow reveal">Poster</p>
+      <h2 class="section__title reveal">행사 포스터</h2>
+      <p class="section__lead reveal">포스터의 QR 코드로 행사 홈페이지와 행사장 위치를 확인할 수 있어요.</p>
+      <a class="btn btn--sm btn--ghost poster__btn reveal" href="assets/img/poster-full.jpg" target="_blank" rel="noopener">크게 보기</a>
+    </div>
+    <a class="poster__img reveal" href="assets/img/poster-full.jpg" target="_blank" rel="noopener">
+      <img src="assets/img/poster.jpg" alt="2026 파주 과학융합축제 제1회 과학잼(JAM) 포스터 — 과학으로 즐기고, 미래로 연결하는 달콤한 축제. 누구나 함께 즐기는 열린 과학 축제, 학생이 기획하고 운영하는 71개 체험 부스. 일시 2026. 10. 24.(토) 10:00~16:00, 장소 운정호수공원(파주놀이구름 옆 잔디광장), 주최/주관 경기도파주교육지원청. 행사 홈페이지와 행사장 위치 확인 QR 코드" width="1100" height="1556" loading="lazy" />
+    </a>
+  </div>
+</section>
+
 </main>
 
 <!-- ===== 푸터 ===== -->
@@ -516,7 +533,7 @@
       </div>
     </div>
     <div class="footer__meta">
-      <p>주최·주관 경기도파주교육지원청 지역교육과</p>
+      <p>주최·주관 경기도파주교육지원청</p>
       <p class="footer__copy">© 2026 Gyeonggi-do Paju Office of Education</p>
     </div>
   </div>

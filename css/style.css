@@ -127,6 +127,10 @@ button{ font:inherit; }
 .nav__inner{ height:var(--nav-h); display:flex; align-items:center; gap:24px; }
 .nav__brand{ display:flex; align-items:center; gap:8px; font-size:17px; font-weight:800; letter-spacing:-.03em; }
 .nav__brand img{ width:28px; height:auto; }
+.nav__name{ white-space:nowrap; }
+/* 로고 글자 색: 2026 파주 검정 · 과학융합축제 파랑 */
+.nav__name .y{ color:#111; }
+.nav__name .b{ color:#004EA1; }
 .nav__menu{ display:flex; gap:4px; margin-left:auto; }
 .nav__menu a{
   padding:8px 12px; border-radius:10px;
@@ -174,6 +178,15 @@ button{ font:inherit; }
   width:max-content; font-size:clamp(40px,5.6vw,68px);
   background:linear-gradient(90deg,#55C3D9,#A8D68B 55%,#F4E27A);
   -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero__title > .hero__yearline{ display:flex; align-items:center; gap:.45em; font-size:clamp(40px,5.6vw,68px); }
+.hero__yearline .hero__year{ font-size:1em; }
+/* 제1회 리본 (리플릿 디자인) */
+.hero__ord{
+  padding:.2em .7em .16em; font-size:.34em; line-height:1.2; letter-spacing:0;
+  position:relative; top:-.04em;
+  background:#275DA9; color:#fff;
+  clip-path:polygon(0 0,100% 0,calc(100% - .32em) 50%,100% 100%,0 100%,.32em 50%);
 }
 .hero__name{ margin-top:6px; font-size:clamp(28px,4.1vw,50px); }
 .hero__name .k{ color:#111; }
@@ -418,6 +431,17 @@ button{ font:inherit; }
 .tt-rows > div:nth-child(even){ background:var(--row-b); }
 .tt-rows dt{ font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
 .tt-rows dd{ font-weight:600; }
+/* 개막식: 시간 칸 하나(10:30 ~ 11:00)에 순서 여러 줄 */
+.tt-rows--merged{ display:grid; grid-template-columns:calc(8.5em + 22px) minmax(0,1fr); gap:3px 0; font-size:15px; }
+.tt-rows--merged dt{
+  grid-row:1 / span 5; display:flex; align-items:center;
+  padding:3px 6px 3px 16px; background:var(--row-a); font-weight:700; white-space:nowrap;
+}
+.tt-rows--merged dd{
+  display:flex; align-items:center; min-height:31px;
+  padding:3px 16px 3px 6px; background:var(--row-a);
+}
+.tt-rows--merged dd:nth-of-type(even){ background:var(--row-b); }
 
 .tt-block--booth .tt-rows > div{ background:var(--row-b); }
 .tt-block--booth .tt-rows > div.is-book{ background:#DFF2ED; }
@@ -496,8 +520,8 @@ button{ font:inherit; }
 .booth-empty{ margin-top:32px; text-align:center; color:var(--ink-3); font-size:15px; }
 
 /* ---------- 13. 스탬프 투어 (종이 리플렛 안내) ---------- */
-/* 메뉴로 이동하면 섹션 위 여백을 건너뛰어 한 화면에 다 보이도록 (축제 소개·시간표·스탬프 투어·오시는 길) */
-#about,#schedule,#stamp,#location{ scroll-margin-top:-72px; }
+/* 메뉴로 이동하면 섹션 위 여백을 건너뛰어 한 화면에 다 보이도록 (축제 소개·시간표·스탬프 투어·오시는 길·포스터) */
+#about,#schedule,#stamp,#location,#poster{ scroll-margin-top:-72px; }
 .stamp__cols{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:start; margin-top:22px; }
 .stamp__steps{ display:grid; gap:10px; counter-reset:step; }
 .stamp__steps--next{ counter-reset:step 2; }   /* 오른쪽 칸은 3번부터 */
@@ -588,6 +612,16 @@ button{ font:inherit; }
 .loc__item p{ margin-top:5px; font-size:14.5px; color:var(--ink-2); }
 .loc__item p b{ font-size:inherit; color:var(--ink); }
 
+/* ---------- 14-1. 포스터 ---------- */
+.poster{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:48px; align-items:center; }
+.poster__btn{ margin-top:20px; }
+.poster__img{ display:block; }
+.poster__img img{
+  /* 메뉴로 이동했을 때 한 화면에 다 들어오는 높이 */
+  height:min(calc(100vh - var(--nav-h) - 64px), 760px); width:auto;
+  border-radius:var(--r); box-shadow:var(--shadow);
+}
+
 /* ---------- 15. 푸터 ---------- */
 .footer{ padding:44px 0 56px; border-top:1px solid var(--line); }
 .footer__inner{ display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; }
@@ -608,8 +642,9 @@ button{ font:inherit; }
   .hero__art{ display:none; }
   .hero__title{ display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:12px; align-items:center; }
   .hero__slogan{ grid-column:1 / -1; }
-  .hero__year,.hero__name,.hero__jam{ grid-column:1; }
-  .hero__year{ font-size:clamp(34px,9vw,68px); }
+  .hero__yearline,.hero__name,.hero__jam{ grid-column:1; }
+  .hero__yearline{ font-size:clamp(34px,9vw,68px); }
+  .hero__ord{ font-size:.38em; }
   .hero__name{ font-size:clamp(24px,6.4vw,50px); }
   .hero__jam{ font-size:clamp(26px,7.2vw,64px); }
   .hero__title-jar{
@@ -630,6 +665,7 @@ button{ font:inherit; }
 
   .nav__cta{ display:none; }
   .nav__toggle{ display:block; }
+  .nav__brand{ min-width:0; font-size:clamp(12.5px,3.6vw,17px); gap:6px; }
   .nav__menu{
     position:absolute; left:0; right:0; top:var(--nav-h);
     flex-direction:column; gap:2px; padding:10px 12px 16px;
@@ -686,6 +722,14 @@ button{ font:inherit; }
   .loc__item b{ font-size:15px; }
   .loc__item p{ margin-top:2px; font-size:13.5px; line-height:1.5; }
 
+  /* 포스터: 휴대폰 한 화면에 제목 + 포스터 */
+  #poster{ padding:24px 0 32px; }
+  .poster{ grid-template-columns:1fr; gap:12px; }
+  #poster .section__title{ font-size:24px; }
+  #poster .section__lead{ margin-top:6px; font-size:14px; }
+  .poster__btn{ display:none; }
+  .poster__img img{ width:100%; height:auto; max-height:calc(100vh - var(--nav-h) - 150px); object-fit:contain; margin:0 auto; }
+
   /* 인사의 말: 휴대폰 한 화면에 들어오도록 */
   #greeting{ padding:28px 0 36px; }
   #greeting .eyebrow{ margin-bottom:4px; }
@@ -722,4 +766,7 @@ button{ font:inherit; }
   .tt-group{ gap:6px; }
   .tt-group__label{ width:52px; font-size:15px; border-radius:12px 0 0 12px; }
   .tt-rows > div{ grid-template-columns:7em minmax(0,1fr); gap:6px; padding:7px 10px; font-size:13.5px; }
+  .tt-rows--merged{ grid-template-columns:calc(7em + 13px) minmax(0,1fr); font-size:13.5px; }
+  .tt-rows--merged dt{ padding:3px 3px 3px 10px; }
+  .tt-rows--merged dd{ padding:3px 10px 3px 3px; }
 }
