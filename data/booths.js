@@ -29,10 +29,10 @@ const BOOTH_FIELDS = [
 ];
 
 const BOOTH_AGES = [
-  { key: '유', label: '유아' },
-  { key: '초', label: '초등' },
-  { key: '중', label: '중등' },
-  { key: '고', label: '고등' }
+  { key: '유', label: '유' },
+  { key: '초', label: '초' },
+  { key: '중', label: '중' },
+  { key: '고', label: '고' }
 ];
 
 const BOOTHS = [
